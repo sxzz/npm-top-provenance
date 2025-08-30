@@ -15,15 +15,28 @@ for (const [name, state] of Object.entries(results as Results)) {
 let string = '## Results\n\n'
 string += 'Generated time: ' + new Date().toISOString() + '\n\n'
 
-string += '### Trusted\n\n'
-string += '<details>\n\n'
-string += trusted.map(generatePackageLink).join('\n')
-string += '\n\n</details>\n\n'
+string += `### Trusted
 
-string += '### Provenance\n\n'
-string += '<details>\n\n'
-string += provenance.map(generatePackageLink).join('\n')
-string += '\n</details>'
+<details>
+
+|  Package   | Downloads |
+| ---------- | --------: |
+`
+string += trusted.map(generatePackageItem).join('\n')
+string += `
+
+</details>
+
+### Provenance
+
+<details>
+
+|  Package   | Downloads |
+| ---------- | --------: |
+`
+string += provenance.map(generatePackageItem).join('\n')
+string += `
+</details>`
 
 let readme = fs
   .readFileSync('./README.md', 'utf8')
@@ -35,6 +48,6 @@ let readme = fs
 fs.writeFileSync('./README.md', readme)
 console.log('README.md updated successfully')
 
-function generatePackageLink(name) {
-  return `- [\`${name}\`](https://www.npmjs.com/package/${name})`
+function generatePackageItem(name) {
+  return `| [\`${name}\`](https://www.npmjs.com/package/${name}) | [![${name} downloads](https://img.shields.io/npm/dm/${name})](https://www.npmcharts.com/compare/${name}?interval=30) |`
 }
