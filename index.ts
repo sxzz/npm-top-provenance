@@ -15,6 +15,7 @@ for (const chunk of chunks) {
   for (const pkg of packages) {
     if ('error' in pkg) {
       console.log(pkg.error)
+      results[pkg.name] = null
     } else {
       results[pkg.name] = pkg.provenance || false
     }
