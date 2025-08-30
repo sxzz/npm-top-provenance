@@ -18,11 +18,17 @@ importers:
         specifier: ^1.11.0
         version: 1.11.0
     devDependencies:
+      '@types/node':
+        specifier: ^24.3.0
+        version: 24.3.0
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
 
 packages:
+
+  '@types/node@24.3.0':
+    resolution: {integrity: sha512-aPTXCrfwnDLj4VvXrm+UUCQjNEvJgNA8s5F1cvwQU+3KNltTOkBm1j30uNLyqqPNe7gE3KFzImYoZEfLhp4Yow==}
 
   es-toolkit@1.39.10:
     resolution: {integrity: sha512-E0iGnTtbDhkeczB0T+mxmoVlT4YNweEKBLq7oaU4p11mecdsZpNWOglI4895Vh4usbQ+LsJiuLuI2L0Vdmfm2w==}
@@ -38,7 +44,14 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  undici-types@7.10.0:
+    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+
 snapshots:
+
+  '@types/node@24.3.0':
+    dependencies:
+      undici-types: 7.10.0
 
   es-toolkit@1.39.10: {}
 
@@ -47,3 +60,5 @@ snapshots:
   npm-high-impact@1.11.0: {}
 
   prettier@3.6.2: {}
+
+  undici-types@7.10.0: {}

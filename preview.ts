@@ -1,8 +1,10 @@
 import results from './results.json' with { type: 'json' }
 
-const provenance = []
-const trusted = []
-for (const [name, state] of Object.entries(results)) {
+const provenance: string[] = []
+const trusted: string[] = []
+for (const [name, state] of Object.entries(
+  results as Record<string, boolean | 'trustedPublisher'>,
+)) {
   if (state === true) {
     provenance.push(name)
   } else if (state === 'trustedPublisher') {
