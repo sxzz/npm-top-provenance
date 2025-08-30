@@ -1,0 +1,49 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      es-toolkit:
+        specifier: ^1.39.10
+        version: 1.39.10
+      fast-npm-meta:
+        specifier: ^0.4.6
+        version: 0.4.6
+      npm-high-impact:
+        specifier: ^1.11.0
+        version: 1.11.0
+    devDependencies:
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
+
+packages:
+
+  es-toolkit@1.39.10:
+    resolution: {integrity: sha512-E0iGnTtbDhkeczB0T+mxmoVlT4YNweEKBLq7oaU4p11mecdsZpNWOglI4895Vh4usbQ+LsJiuLuI2L0Vdmfm2w==}
+
+  fast-npm-meta@0.4.6:
+    resolution: {integrity: sha512-zbBBOAOlzxfrU4WSnbCHk/nR6Vf32lSEPxDEvNOR08Z5DSZ/A6qJu0rqrHVcexBTd1hc2gim998xnqF/R1PuEw==}
+
+  npm-high-impact@1.11.0:
+    resolution: {integrity: sha512-ycoutdN0E3QgOO4vlscYJ2pv/W1aC6RuaBoJW0cfer04obJI4aFW2TNjtrd5NUM3frY7qtU13n1In/JHE40qeQ==}
+
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+
+snapshots:
+
+  es-toolkit@1.39.10: {}
+
+  fast-npm-meta@0.4.6: {}
+
+  npm-high-impact@1.11.0: {}
+
+  prettier@3.6.2: {}

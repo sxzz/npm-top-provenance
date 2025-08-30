@@ -1,0 +1,22 @@
+{
+  "name": "provenance-high-impact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "type": "module",
+  "dependencies": {
+    "es-toolkit": "^1.39.10",
+    "fast-npm-meta": "^0.4.6",
+    "npm-high-impact": "^1.11.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
