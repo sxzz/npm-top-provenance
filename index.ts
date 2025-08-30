@@ -3,10 +3,14 @@ import { npmHighImpact } from 'npm-high-impact'
 import { getLatestVersionBatch } from 'fast-npm-meta'
 import { chunk } from 'es-toolkit'
 
+export interface Results {
+  [name: string]: boolean | null | 'trustedPublisher'
+}
+
 console.log('total:', npmHighImpact.length)
 
 const chunks = chunk(npmHighImpact, 500)
-const results = {}
+const results: Results = {}
 for (const chunk of chunks) {
   const packages = await getLatestVersionBatch(chunk, {
     metadata: true,
