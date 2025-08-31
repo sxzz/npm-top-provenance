@@ -15,6 +15,7 @@
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "funding": "https://github.com/sponsors/sxzz",
   "scripts": {
+    "refresh": "node index.ts && node update-readme.ts && pnpm run format",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsc --noEmit",
