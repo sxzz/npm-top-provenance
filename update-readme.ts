@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import results from './results.json' with { type: 'json' }
-import type { Results } from './index'
+import type { Results } from './index.ts'
 
 const provenance: string[] = []
 const trusted: string[] = []
@@ -12,10 +12,11 @@ for (const [name, state] of Object.entries(results as Results)) {
   }
 }
 
-let string = '## Results\n\n'
-string += 'Generated time: ' + new Date().toISOString() + '\n\n'
+let string = `## Results
 
-string += `### Trusted
+Generated time: ${new Date().toISOString()}
+
+### Trusted
 
 <details>
 
@@ -38,7 +39,7 @@ string += provenance.map(generatePackageItem).join('\n')
 string += `
 </details>`
 
-let readme = fs
+const readme = fs
   .readFileSync('./README.md', 'utf8')
   .replace(
     /<!-- START -->[\s\S]*<!-- END -->/,
@@ -48,6 +49,6 @@ let readme = fs
 fs.writeFileSync('./README.md', readme)
 console.log('README.md updated successfully')
 
-function generatePackageItem(name) {
+function generatePackageItem(name: string) {
   return `| [\`${name}\`](https://www.npmjs.com/package/${name}) | [![${name} downloads](https://img.shields.io/npm/dm/${name})](https://www.npmcharts.com/compare/${name}?interval=30) |`
 }

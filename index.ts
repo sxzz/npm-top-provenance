@@ -1,7 +1,7 @@
 import fs from 'node:fs'
-import { npmHighImpact } from 'npm-high-impact'
-import { getLatestVersionBatch } from 'fast-npm-meta'
 import { chunk } from 'es-toolkit'
+import { getLatestVersionBatch } from 'fast-npm-meta'
+import { npmHighImpact } from 'npm-high-impact'
 
 export interface Results {
   [name: string]: boolean | null | 'trustedPublisher'
