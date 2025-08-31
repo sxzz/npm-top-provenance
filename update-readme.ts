@@ -20,6 +20,8 @@ Generated time: ${new Date().toISOString()}
 
 <details>
 
+<summary>Click to expand</summary>
+
 |  Package   | Downloads |
 | ---------- | --------: |
 `
@@ -31,6 +33,8 @@ string += `
 ### Provenance
 
 <details>
+
+<summary>Click to expand</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
