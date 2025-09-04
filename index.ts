@@ -27,5 +27,5 @@ for (const chunk of chunks) {
   console.log('done:', Object.keys(results).length)
 }
 
-const json = JSON.stringify(`${results}\n`, undefined, 2)
-fs.writeFileSync('results.json', json)
+const json = JSON.stringify(results, undefined, 2)
+fs.writeFileSync('results.json', `${json}\n`)
