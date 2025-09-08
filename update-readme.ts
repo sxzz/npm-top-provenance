@@ -4,15 +4,18 @@ import type { Results } from './index.ts'
 
 const provenance: string[] = []
 const trusted: string[] = []
+const untrusted: string[] = []
 for (const [name, state] of Object.entries(results as Results)) {
   if (state === true) {
     provenance.push(name)
   } else if (state === 'trustedPublisher') {
     trusted.push(name)
+  } else {
+    untrusted.push(name)
   }
 }
 
-let string = `## Results
+const content = `## Results
 
 Generated time: ${new Date().toISOString()}
 
@@ -24,9 +27,7 @@ Generated time: ${new Date().toISOString()}
 
 |  Package   | Downloads |
 | ---------- | --------: |
-`
-string += trusted.map(generatePackageItem).join('\n')
-string += `
+${trusted.map(generatePackageItem).join('\n')}
 
 </details>
 
@@ -38,16 +39,27 @@ string += `
 
 |  Package   | Downloads |
 | ---------- | --------: |
-`
-string += provenance.map(generatePackageItem).join('\n')
-string += `
+${provenance.map(generatePackageItem).join('\n')}
+
+</details>
+
+### Untrusted (showing first 100 of ${untrusted.length})
+
+<details>
+
+<summary>Click to expand</summary>
+
+|  Package   | Downloads |
+| ---------- | --------: |
+${untrusted.slice(0, 100).map(generatePackageItem).join('\n')}
+
 </details>`
 
 const readme = fs
   .readFileSync('./README.md', 'utf8')
   .replace(
     /<!-- START -->[\s\S]*<!-- END -->/,
-    `<!-- START -->\n\n${string}\n<!-- END -->`,
+    `<!-- START -->\n\n${content}\n<!-- END -->`,
   )
 
 fs.writeFileSync('./README.md', readme)
