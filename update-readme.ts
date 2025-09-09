@@ -19,6 +19,8 @@ const content = `## Results
 
 Generated time: ${new Date().toISOString()}
 
+Full results in [results.json](./results.json)
+
 ### Trusted
 
 <details>
@@ -43,11 +45,11 @@ ${provenance.map(generatePackageItem).join('\n')}
 
 </details>
 
-### Untrusted (showing first 100 of ${untrusted.length})
+### Untrusted
 
 <details>
 
-<summary>Click to expand</summary>
+<summary>Click to show first 100 of ${untrusted.length}</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
