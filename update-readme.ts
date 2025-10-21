@@ -15,13 +15,17 @@ for (const [name, state] of Object.entries(results as Results)) {
   }
 }
 
+const total = trusted.length + provenance.length + untrusted.length
+
 const content = `## Results
 
 Generated time: ${new Date().toISOString()}
 
+Total packages: ${total}
+
 Full results in [results.json](./results.json)
 
-### Trusted
+### Trusted (${trusted.length})
 
 <details>
 
@@ -33,7 +37,7 @@ ${trusted.map(generatePackageItem).join('\n')}
 
 </details>
 
-### Provenance
+### Provenance (${provenance.length})
 
 <details>
 
@@ -45,11 +49,11 @@ ${provenance.map(generatePackageItem).join('\n')}
 
 </details>
 
-### Untrusted
+### Untrusted (${untrusted.length})
 
 <details>
 
-<summary>Click to show first 100 of ${untrusted.length}</summary>
+<summary>Click to show first 100</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
