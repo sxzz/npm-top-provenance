@@ -5,7 +5,8 @@ import type { Results } from './index.ts'
 const provenance: string[] = []
 const trusted: string[] = []
 const untrusted: string[] = []
-for (const [name, state] of Object.entries(results as Results)) {
+const items = Object.entries(results as Results)
+for (const [name, state] of items) {
   if (state === true) {
     provenance.push(name)
   } else if (state === 'trustedPublisher') {
@@ -19,13 +20,15 @@ const content = `## Results
 
 Generated time: ${new Date().toISOString()}
 
+Total packages: ${items.length}
+
 Full results in [results.json](./results.json)
 
 ### Trusted
 
 <details>
 
-<summary>Click to expand</summary>
+<summary>Click to expand (${trusted.length} in total)</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
@@ -37,7 +40,7 @@ ${trusted.map(generatePackageItem).join('\n')}
 
 <details>
 
-<summary>Click to expand</summary>
+<summary>Click to expand (${provenance.length} in total)</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
