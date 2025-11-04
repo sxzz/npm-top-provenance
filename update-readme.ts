@@ -15,7 +15,7 @@ for (const [name, state] of Object.entries(results as Results)) {
   }
 }
 
-const total = trusted.length + provenance.length + untrusted.length
+const total = Object.keys(results).length
 
 const content = `## Results
 
@@ -25,11 +25,11 @@ Total packages: ${total}
 
 Full results in [results.json](./results.json)
 
-### Trusted (${trusted.length})
+### Trusted
 
 <details>
 
-<summary>Click to expand</summary>
+<summary>Click to expand (${trusted.length} in total)</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
@@ -37,11 +37,11 @@ ${trusted.map(generatePackageItem).join('\n')}
 
 </details>
 
-### Provenance (${provenance.length})
+### Provenance
 
 <details>
 
-<summary>Click to expand</summary>
+<summary>Click to expand (${provenance.length} in total)</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
@@ -49,11 +49,11 @@ ${provenance.map(generatePackageItem).join('\n')}
 
 </details>
 
-### Untrusted (${untrusted.length})
+### Untrusted
 
 <details>
 
-<summary>Click to show first 100</summary>
+<summary>Click to show first 100 of ${untrusted.length}</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
