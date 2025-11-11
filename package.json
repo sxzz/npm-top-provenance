@@ -1,7 +1,7 @@
 {
   "name": "npm-top-provenance",
   "private": true,
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.21.0",
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/sxzz/npm-top-provenance#readme",
@@ -22,15 +22,15 @@
     "format": "prettier --cache --write ."
   },
   "dependencies": {
-    "es-toolkit": "^1.39.10",
-    "fast-npm-meta": "^0.4.6",
+    "es-toolkit": "^1.41.0",
+    "fast-npm-meta": "^0.4.7",
     "npm-high-impact": "^1.11.0"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^7.1.4",
+    "@sxzz/eslint-config": "^7.2.10",
     "@sxzz/prettier-config": "^2.2.4",
-    "@types/node": "^24.3.1",
-    "eslint": "^9.35.0",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.1",
     "prettier": "^3.6.2"
   },
   "prettier": "@sxzz/prettier-config"
