@@ -55,6 +55,7 @@ const readme = fs
 fs.writeFileSync('./README.md', readme)
 console.log('README.md updated successfully')
 
-function generatePackageItem(name: string) {
-  return `| [\`${name}\`](https://www.npmjs.com/package/${name}) | <img src="https://img.shields.io/npm/dm/${name}" alt="${name} downloads" loading="lazy" /> |`
+function generatePackageItem(name: string, index: number): string {
+  const withBadge = index < 50
+  return `| [\`${name}\`](https://www.npmjs.com/package/${name}) | ${`<a href="http://npmcharts.com/compare/${name}">${withBadge ? `<img src="https://img.shields.io/npm/dm/${name}" alt="${name} downloads" loading="lazy" />` : 'View'}</a>`} |`
 }
