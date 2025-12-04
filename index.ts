@@ -32,10 +32,10 @@ for (const chunk of chunks) {
 const json = JSON.stringify(results, undefined, 2)
 fs.writeFileSync('results.json', `${json}\n`)
 
-function retry(fn: () => Promise<any>, retries = 3): Promise<any> {
+function retry(fn: () => Promise<any>, retries = 5): Promise<any> {
   return fn().catch(async (error) => {
     if (retries > 0) {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 3000))
       console.log(`Retrying... (${retries} left)`)
       return retry(fn, retries - 1)
     }
