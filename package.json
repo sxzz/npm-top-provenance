@@ -1,19 +1,19 @@
 {
   "name": "npm-top-provenance",
+  "type": "module",
   "private": true,
   "packageManager": "pnpm@10.24.0",
-  "type": "module",
+  "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
+  "funding": "https://github.com/sponsors/sxzz",
   "homepage": "https://github.com/sxzz/npm-top-provenance#readme",
-  "bugs": {
-    "url": "https://github.com/sxzz/npm-top-provenance/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sxzz/npm-top-provenance.git"
   },
-  "author": "Kevin Deng <sxzz@sxzz.moe>",
-  "funding": "https://github.com/sponsors/sxzz",
+  "bugs": {
+    "url": "https://github.com/sxzz/npm-top-provenance/issues"
+  },
   "scripts": {
     "refresh": "node index.ts && node update-readme.ts && pnpm run format",
     "lint": "eslint --cache .",
