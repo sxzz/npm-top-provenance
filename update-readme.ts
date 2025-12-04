@@ -28,11 +28,11 @@ Full results in [results.json](./results.json)
 
 <details>
 
-<summary>Click to expand (${trusted.length} in total)</summary>
+<summary>Click to show first 500 of ${trusted.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${trusted.map(generatePackageItem).join('\n')}
+${trusted.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
@@ -40,11 +40,11 @@ ${trusted.map(generatePackageItem).join('\n')}
 
 <details>
 
-<summary>Click to expand (${provenance.length} in total)</summary>
+<summary>Click to show first 500 of ${provenance.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${provenance.map(generatePackageItem).join('\n')}
+${provenance.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
@@ -52,11 +52,11 @@ ${provenance.map(generatePackageItem).join('\n')}
 
 <details>
 
-<summary>Click to show first 100 of ${untrusted.length}</summary>
+<summary>Click to show first 200 of ${untrusted.length}</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${untrusted.slice(0, 100).map(generatePackageItem).join('\n')}
+${untrusted.slice(0, 200).map(generatePackageItem).join('\n')}
 
 </details>`
 
