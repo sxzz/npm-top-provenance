@@ -56,5 +56,5 @@ fs.writeFileSync('./README.md', readme)
 console.log('README.md updated successfully')
 
 function generatePackageItem(name: string) {
-  return `| [\`${name}\`](https://www.npmjs.com/package/${name}) | [![${name} downloads](https://img.shields.io/npm/dm/${name})](https://www.npmcharts.com/compare/${name}?interval=30) |`
+  return `| [\`${name}\`](https://www.npmjs.com/package/${name}) | <img src="https://img.shields.io/npm/dm/${name}" alt="${name} downloads" loading="lazy" /> |`
 }
