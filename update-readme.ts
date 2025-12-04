@@ -1,26 +1,11 @@
 import fs from 'node:fs'
-import results from './results.json' with { type: 'json' }
-import type { Results } from './index.ts'
-
-const provenance: string[] = []
-const trusted: string[] = []
-const untrusted: string[] = []
-const items = Object.entries(results as Results)
-for (const [name, state] of items) {
-  if (state === true) {
-    provenance.push(name)
-  } else if (state === 'trustedPublisher') {
-    trusted.push(name)
-  } else {
-    untrusted.push(name)
-  }
-}
+import { count, provenance, trusted, untrusted } from './analyze.ts'
 
 const content = `## Results
 
 Generated time: ${new Date().toISOString()}
 
-Total packages: ${items.length}
+Total packages: ${count}
 
 Full results in [results.json](./results.json)
 

@@ -15,16 +15,19 @@
     "url": "https://github.com/sxzz/npm-top-provenance/issues"
   },
   "scripts": {
-    "refresh": "node index.ts && node update-readme.ts && pnpm run format",
+    "refresh": "node index.ts && node update-readme.ts && node chart.ts && pnpm run format",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsc --noEmit",
     "format": "prettier --cache --write ."
   },
   "dependencies": {
+    "@napi-rs/skia": "0.0.1-alpha.0",
+    "chart.js": "^4.5.1",
     "es-toolkit": "^1.42.0",
     "fast-npm-meta": "^0.4.7",
-    "npm-high-impact": "^1.12.0"
+    "npm-high-impact": "^1.12.0",
+    "skia-canvas": "^3.0.8"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^7.4.1",
