@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import ky from 'ky'
+import ky, { HTTPError } from 'ky'
 import { createSpinner } from 'nanospinner'
 import { npmHighImpact } from 'npm-high-impact'
 import pLimit from 'p-limit'
@@ -58,6 +58,10 @@ async function getMetadata(name: string): Promise<Result> {
   )
     .json()
     .catch((error) => {
+      if (error instanceof HTTPError && error.response.status === 404) {
+        return null
+      }
+
       console.warn(`\nFailed to get metadata for ${name}: ${error}`)
       return null
     })
