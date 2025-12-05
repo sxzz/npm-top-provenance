@@ -1,8 +1,9 @@
+import { writeFile } from 'node:fs/promises'
+import { createCanvas, SvgExportFlag } from '@napi-rs/canvas'
 import Chart from 'chart.js/auto'
-import { Canvas } from 'skia-canvas'
 import { provenance, trusted, untrusted } from './analyze.ts'
 
-const canvas = new Canvas(800, 800)
+const canvas = createCanvas(800, 800, SvgExportFlag.NoPrettyXML)
 
 const data = {
   labels: ['Trusted', 'Provenance', 'Untrusted'],
@@ -28,5 +29,7 @@ const chart = new Chart(canvas as any, {
     },
   },
 })
-await canvas.toFile('chart.svg', { format: 'svg' })
+
+await writeFile('chart.svg', canvas.getContent())
+
 chart.destroy()

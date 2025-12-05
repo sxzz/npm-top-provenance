@@ -22,13 +22,13 @@
     "format": "prettier --cache --write ."
   },
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.83",
     "chart.js": "^4.5.1",
     "fast-npm-meta": "^0.4.7",
     "ky": "^1.14.0",
     "nanospinner": "^1.2.2",
     "npm-high-impact": "^1.12.0",
-    "p-limit": "^7.2.0",
-    "skia-canvas": "^3.0.8"
+    "p-limit": "^7.2.0"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^7.4.1",

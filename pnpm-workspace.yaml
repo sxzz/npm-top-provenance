@@ -1,5 +1,4 @@
 ignoredBuiltDependencies:
   - unrs-resolver
 
-onlyBuiltDependencies:
-  - skia-canvas
+trustPolicy: no-downgrade
