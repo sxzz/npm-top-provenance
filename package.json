@@ -18,13 +18,12 @@
     "refresh": "node index.ts && node update-readme.ts && node chart.ts && pnpm run format",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsgo --noEmit",
     "format": "prettier --cache --write ."
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.83",
     "chart.js": "^4.5.1",
-    "fast-npm-meta": "^0.4.7",
     "ky": "^1.14.0",
     "nanospinner": "^1.2.2",
     "npm-high-impact": "^1.12.0",
@@ -34,6 +33,7 @@
     "@sxzz/eslint-config": "^7.4.1",
     "@sxzz/prettier-config": "^2.2.6",
     "@types/node": "^24.10.1",
+    "@typescript/native-preview": "7.0.0-dev.20251205.1",
     "eslint": "^9.39.1",
     "prettier": "^3.7.4"
   },
