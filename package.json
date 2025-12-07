@@ -15,7 +15,7 @@
     "url": "https://github.com/sxzz/npm-top-provenance/issues"
   },
   "scripts": {
-    "refresh": "node index.ts && node update-readme.ts && node chart.ts && pnpm run format",
+    "refresh": "node index.ts && node update-readme.ts && node chart.ts && pnpm run format && svgo chart.svg",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsgo --noEmit",
@@ -27,7 +27,8 @@
     "ky": "^1.14.0",
     "nanospinner": "^1.2.2",
     "npm-high-impact": "^1.12.0",
-    "p-limit": "^7.2.0"
+    "p-limit": "^7.2.0",
+    "svgo": "^4.0.0"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^7.4.1",

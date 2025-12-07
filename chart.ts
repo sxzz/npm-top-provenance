@@ -31,5 +31,5 @@ const chart = new Chart(canvas as any, {
 })
 
 await writeFile('chart.svg', canvas.getContent())
-
+console.log('chart.svg updated successfully')
 chart.destroy()
