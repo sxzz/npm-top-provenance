@@ -53,6 +53,7 @@ async function getMetadata(name: string): Promise<Result> {
       retry: {
         limit: 10,
         jitter: (delay) => delay * (0.8 + Math.random() * 0.4),
+        retryOnTimeout: true,
       },
     },
   )
