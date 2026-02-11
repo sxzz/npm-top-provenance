@@ -57,5 +57,5 @@ console.log('README.md updated successfully')
 
 function generatePackageItem(name: string, index: number): string {
   const withBadge = index < 50
-  return `| [\`${name}\`](https://www.npmjs.com/package/${name}) | ${`<a href="http://npmcharts.com/compare/${name}">${withBadge ? `<img src="https://img.shields.io/npm/dm/${name}" alt="${name} downloads" loading="lazy" />` : 'View'}</a>`} |`
+  return `| [\`${name}\`](https://npmx.dev/package/${name}) | ${`<a href="http://npmcharts.com/compare/${name}">${withBadge ? `<img src="https://npmx.dev/api/registry/badge/downloads/${name}" alt="${name} downloads" loading="lazy" />` : 'View'}</a>`} |`
 }
