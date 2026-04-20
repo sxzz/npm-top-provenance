@@ -30,7 +30,7 @@
   "p-locate": ["7.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "locate-path": ["8.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "picomatch": ["4.0.4", false, "Jon Schlinkert"],
-  "uuid": ["13.0.0", false, null],
+  "uuid": ["14.0.0", "trustedPublisher", null],
   "p-limit": ["7.3.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "find-up": ["8.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "safe-buffer": ["5.2.1", false, "Feross Aboukhadijeh <feross@feross.org>"],
@@ -290,7 +290,7 @@
   "import-fresh": ["4.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "esbuild": ["0.28.0", "trustedPublisher", null],
   "node-releases": ["2.0.37", false, "Sergey Rubanov <chi187@gmail.com>"],
-  "axios": ["1.15.0", "trustedPublisher", "Matt Zabriskie"],
+  "axios": ["1.15.1", "trustedPublisher", "Matt Zabriskie"],
   "jackspeak": ["4.2.3", false, "Isaac Z. Schlueter <i@izs.me>"],
   "@babel/code-frame": [
     "7.29.0",
@@ -447,7 +447,7 @@
   ],
   "extend-shallow": ["3.0.2", false, "Jon Schlinkert"],
   "@esbuild/linux-x64": ["0.28.0", "trustedPublisher", null],
-  "parse5": ["8.0.0", false, "Ivan Nikulin <ifaaan@gmail.com>"],
+  "parse5": ["8.0.1", false, "Ivan Nikulin <ifaaan@gmail.com>"],
   "fs.realpath": ["1.0.0", false, "Isaac Z. Schlueter <i@izs.me>"],
   "restore-cursor": ["5.1.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "istanbul-lib-instrument": [
@@ -1044,7 +1044,7 @@
   "import-local": ["3.2.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@types/unist": ["3.0.3", false, null],
   "through2": ["4.0.2", false, "Rod Vagg <r@va.gg>"],
-  "inquirer": ["13.4.1", false, "Simon Boudrias <admin@simonboudrias.com>"],
+  "inquirer": ["13.4.2", false, "Simon Boudrias <admin@simonboudrias.com>"],
   "@smithy/shared-ini-file-loader": [
     "4.4.9",
     false,
@@ -2002,7 +2002,7 @@
     "The Babel Team (https://babel.dev/team)"
   ],
   "typedarray": ["0.0.7", false, "James Halliday <mail@substack.net>"],
-  "stylis": ["4.3.6", false, "Sultan Tarimo <sultantarimo@me.com>"],
+  "stylis": ["4.4.0", false, "Sultan Tarimo <sultantarimo@me.com>"],
   "regenerate": ["1.4.2", false, "Mathias Bynens"],
   "@humanfs/core": ["0.19.2", false, "Nicholas C. Zakas"],
   "@radix-ui/react-compose-refs": ["1.1.2", false, null],
@@ -2479,7 +2479,7 @@
   "postcss-import": ["16.1.1", false, "Maxime Thirouin"],
   "@radix-ui/react-id": ["1.1.1", false, null],
   "@inquirer/core": [
-    "11.1.8",
+    "11.1.9",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -2674,7 +2674,7 @@
   ],
   "unplugin": ["3.0.0", "trustedPublisher", null],
   "@inquirer/confirm": [
-    "6.0.11",
+    "6.0.12",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -3023,7 +3023,7 @@
   "d3-ease": ["3.0.1", false, "Mike Bostock"],
   "@emotion/weak-memoize": ["0.4.0", false, null],
   "parse5-htmlparser2-tree-adapter": [
-    "8.0.0",
+    "8.0.1",
     false,
     "Ivan Nikulin <ifaaan@gmail.com>"
   ],
@@ -3109,7 +3109,7 @@
   "default-browser": ["5.5.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "is-alphabetical": ["2.0.1", false, "Titus Wormer <tituswormer@gmail.com>"],
   "@swc/core": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -3417,7 +3417,7 @@
   "lightningcss": ["1.32.0", false, null],
   "@types/d3-array": ["3.2.2", false, null],
   "@swc/core-linux-x64-gnu": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -3520,7 +3520,7 @@
     "Douglas Christopher Wilson <doug@somethingdoug.com>"
   ],
   "@inquirer/prompts": [
-    "8.4.1",
+    "8.4.2",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -3578,7 +3578,7 @@
     "Yehuda Katz, Tom Dale, Stefan Penner and contributors"
   ],
   "sockjs": ["0.3.24", false, "Marek Majkowski"],
-  "@tanstack/query-core": ["5.99.1", "trustedPublisher", "tannerlinsley"],
+  "@tanstack/query-core": ["5.99.2", "trustedPublisher", "tannerlinsley"],
   "@types/jsdom": ["28.0.1", false, null],
   "@radix-ui/react-visually-hidden": ["1.2.4", false, null],
   "@babel/plugin-syntax-decorators": [
@@ -3705,7 +3705,7 @@
   "expect-type": ["1.3.0", false, null],
   "lightningcss-linux-x64-gnu": ["1.32.0", false, null],
   "prismjs": ["1.30.0", false, "Lea Verou"],
-  "@tanstack/react-query": ["5.99.1", "trustedPublisher", "tannerlinsley"],
+  "@tanstack/react-query": ["5.99.2", "trustedPublisher", "tannerlinsley"],
   "minimist-options": ["4.1.0", false, "Vadim Demedes <vdemedes@gmail.com>"],
   "warning": ["4.0.3", false, "Berkeley Martinez <berkeley@berkeleytrue.com>"],
   "strtok3": ["10.3.5", false, "Borewit"],
@@ -3729,7 +3729,7 @@
     "The Babel Team (https://babel.dev/team)"
   ],
   "@inquirer/input": [
-    "5.0.11",
+    "5.0.12",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -3778,7 +3778,7 @@
   "arch": ["3.0.0", false, "Feross Aboukhadijeh <feross@feross.org>"],
   "void-elements": ["3.1.0", false, "hemanth.hm"],
   "@inquirer/select": [
-    "5.1.3",
+    "5.1.4",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -3793,7 +3793,7 @@
   "markdown-it": ["14.1.1", false, null],
   "@types/d3-ease": ["3.0.2", false, null],
   "@inquirer/expand": [
-    "5.0.12",
+    "5.0.13",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -3831,13 +3831,13 @@
     "Greg Bergé <berge.greg@gmail.com>"
   ],
   "@inquirer/password": [
-    "5.0.11",
+    "5.0.12",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
   "socket.io-parser": ["4.2.6", "trustedPublisher", null],
   "@inquirer/checkbox": [
-    "5.1.3",
+    "5.1.4",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -3929,12 +3929,12 @@
     "AWS SDK for JavaScript Team"
   ],
   "@inquirer/editor": [
-    "5.1.0",
+    "5.1.1",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
   "eventsource-parser": [
-    "3.0.7",
+    "3.0.8",
     "trustedPublisher",
     "Espen Hovlandsdal <espen@hovlandsdal.com>"
   ],
@@ -3945,7 +3945,7 @@
   "klona": ["2.0.6", false, "Luke Edwards <luke.edwards05@gmail.com>"],
   "mri": ["1.2.0", false, "Luke Edwards <luke.edwards05@gmail.com>"],
   "@inquirer/rawlist": [
-    "5.2.7",
+    "5.2.8",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -4030,7 +4030,7 @@
   ],
   "file-loader": ["6.2.0", false, "Tobias Koppers @sokra"],
   "@inquirer/search": [
-    "4.1.7",
+    "4.1.8",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -4040,7 +4040,7 @@
     "Dominic Tarr <dominic.tarr@gmail.com>"
   ],
   "@inquirer/number": [
-    "4.0.11",
+    "4.0.12",
     false,
     "Simon Boudrias <admin@simonboudrias.com>"
   ],
@@ -4067,7 +4067,7 @@
   ],
   "tabbable": ["6.4.0", "trustedPublisher", "David Clark"],
   "@swc/core-linux-x64-musl": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -4631,7 +4631,7 @@
     false,
     "Michael Mclaughlin <M8ch88l@gmail.com>"
   ],
-  "@turf/helpers": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/helpers": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "estree-util-is-identifier-name": [
     "3.0.0",
     false,
@@ -5106,7 +5106,7 @@
     false,
     "Titus Wormer <tituswormer@gmail.com>"
   ],
-  "types-registry": ["0.1.765", false, "Microsoft Corp."],
+  "types-registry": ["0.1.766", false, "Microsoft Corp."],
   "@lukeed/csprng": ["1.1.0", false, "Luke Edwards <luke.edwards05@gmail.com>"],
   "@babel/plugin-proposal-unicode-property-regex": [
     "7.18.6",
@@ -5696,7 +5696,7 @@
     "Anthony Fu <anthonyfu117@hotmail.com>"
   ],
   "exit-x": ["0.2.2", false, "Grunt Development Team"],
-  "@turf/invariant": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/invariant": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "shellwords": ["1.1.1", false, "Jimmy Cuadra <jimmy@jimmycuadra.com>"],
   "postcss-flexbugs-fixes": ["5.0.2", false, "Luis Rudge <luis@luisrudge.net>"],
   "growly": ["1.3.0", false, "Ibrahim Al-Rajhi <abrahamalrajhi@gmail.com>"],
@@ -6044,7 +6044,7 @@
   "adler-32": ["1.3.1", false, "sheetjs"],
   "d3-contour": ["4.0.2", false, "Mike Bostock"],
   "parse5-parser-stream": ["8.0.0", false, "Ivan Nikulin <ifaaan@gmail.com>"],
-  "@turf/meta": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/meta": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@radix-ui/react-hover-card": ["1.1.15", false, null],
   "class-validator": ["0.15.1", false, "TypeStack contributors"],
   "sparse-bitfield": ["3.0.3", false, "Mathias Buus"],
@@ -6419,7 +6419,7 @@
     "trustedPublisher",
     "Lukas Taegert-Atkinson"
   ],
-  "@vue/language-core": ["3.2.6", "trustedPublisher", null],
+  "@vue/language-core": ["3.2.7", "trustedPublisher", null],
   "@aws-sdk/client-lambda": ["3.1032.0", false, "AWS SDK for JavaScript Team"],
   "unicode-trie": ["2.0.0", false, "Devon Govett <devongovett@gmail.com>"],
   "private": ["0.1.8", false, "Ben Newman <bn@cs.stanford.edu>"],
@@ -6656,7 +6656,7 @@
   "cfb": ["1.2.2", false, "sheetjs"],
   "@selderee/plugin-htmlparser2": ["0.12.0", false, "KillyMXI"],
   "@tanstack/react-query-devtools": [
-    "5.99.1",
+    "5.99.2",
     "trustedPublisher",
     "tannerlinsley"
   ],
@@ -7292,7 +7292,7 @@
   "base-64": ["1.0.0", false, "Mathias Bynens"],
   "find-my-way": ["9.5.0", false, "Tomas Della Vedova - @delvedor"],
   "@types/linkify-it": ["5.0.0", false, null],
-  "@tanstack/query-devtools": ["5.99.1", "trustedPublisher", "tannerlinsley"],
+  "@tanstack/query-devtools": ["5.99.2", "trustedPublisher", "tannerlinsley"],
   "merge": ["2.1.1", false, "yeikos"],
   "@algolia/requester-node-http": ["5.50.2", "trustedPublisher", "Algolia"],
   "@firebase/app-compat": [
@@ -7613,7 +7613,7 @@
     false,
     "Sebastian Vollnhals <sebastian@vollnhals.info>"
   ],
-  "safe-regex2": ["5.1.0", false, "James Halliday <mail@substack.net>"],
+  "safe-regex2": ["5.1.1", false, "James Halliday <mail@substack.net>"],
   "@shikijs/core": ["4.0.2", "trustedPublisher", "Pine Wu <octref@gmail.com>"],
   "sponge-case": ["2.0.3", false, "Nate Rabins <nrabins@gmail.com>"],
   "@types/webpack-env": ["1.18.8", false, null],
@@ -7645,7 +7645,7 @@
     "OpenTelemetry Authors"
   ],
   "parse5-html-rewriting-stream": [
-    "8.0.0",
+    "8.0.1",
     false,
     "Ivan Nikulin <ifaaan@gmail.com>"
   ],
@@ -7777,7 +7777,7 @@
     "hanric <hanric.zhang@gmail.com>"
   ],
   "hookified": ["2.1.1", false, "Jared Wray <me@jaredwray.com>"],
-  "precinct": ["12.3.0", false, "Joel Kemp <joel@mrjoelkemp.com>"],
+  "precinct": ["12.3.1", false, "Joel Kemp <joel@mrjoelkemp.com>"],
   "merge-source-map": ["1.1.0", false, "keik <k4t0.kei@gmail.com>"],
   "deep-object-diff": ["1.1.9", false, "Matt Phillips"],
   "html-minifier": ["4.0.0", false, "Juriy \"kangax\" Zaytsev"],
@@ -7961,7 +7961,7 @@
   "@react-spring/core": ["10.0.3", false, "Paul Henschel"],
   "@tiptap/extension-document": ["3.22.4", "trustedPublisher", null],
   "detective-typescript": [
-    "14.1.0",
+    "14.1.1",
     false,
     "Patrik Henningsson <patrik.henningsson@gmail.com>"
   ],
@@ -8122,7 +8122,7 @@
   "@chevrotain/utils": ["12.0.0", "trustedPublisher", "Shahar Soel"],
   "string-convert": ["0.2.1", false, ""],
   "@swc/core-linux-arm64-gnu": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -8208,7 +8208,7 @@
   "@redocly/openapi-core": ["2.28.1", "trustedPublisher", null],
   "@types/jasmine": ["6.0.0", false, null],
   "cli-color": ["2.0.4", false, "Mariusz Nowak <medyk@medikoo.com>"],
-  "oniguruma-to-es": ["4.3.5", false, "Steven Levithan"],
+  "oniguruma-to-es": ["4.3.6", false, "Steven Levithan"],
   "@nicolo-ribaudo/chokidar-2": [
     "2.1.8-no-fsevents.3",
     false,
@@ -8263,7 +8263,7 @@
   "user-home": ["3.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@react-spring/rafz": ["10.0.3", false, "Josh Ellis"],
   "prosemirror-collab": ["1.3.1", false, null],
-  "react-toastify": ["11.0.5", false, "Fadi Khadra <fdkhadra@gmail.com>"],
+  "react-toastify": ["11.1.0", false, "Fadi Khadra <fdkhadra@gmail.com>"],
   "@opentelemetry/resource-detector-gcp": [
     "0.50.0",
     "trustedPublisher",
@@ -8490,7 +8490,7 @@
     "Divyansh Singh <brc-dd@hotmail.com>"
   ],
   "@expo/metro-config": ["55.0.16", false, null],
-  "vue-component-type-helpers": ["3.2.6", "trustedPublisher", null],
+  "vue-component-type-helpers": ["3.2.7", "trustedPublisher", null],
   "@types/http-assert": ["1.5.6", false, null],
   "typedoc": ["0.28.19", "trustedPublisher", null],
   "@tiptap/extension-link": ["3.22.4", "trustedPublisher", null],
@@ -8513,7 +8513,7 @@
   "@tiptap/extension-floating-menu": ["3.22.4", "trustedPublisher", null],
   "@types/dompurify": ["3.2.0", false, null],
   "@ant-design/icons": ["6.1.1", false, null],
-  "vue-tsc": ["3.2.6", "trustedPublisher", null],
+  "vue-tsc": ["3.2.7", "trustedPublisher", null],
   "react-native-gesture-handler": [
     "2.31.1",
     "trustedPublisher",
@@ -8658,7 +8658,7 @@
     "Firebase <firebase-support@google.com>"
   ],
   "@swc/core-linux-arm64-musl": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -9034,7 +9034,7 @@
   "@storybook/cli": ["10.3.5", "trustedPublisher", "Storybook Team"],
   "babel-plugin-transform-strict-mode": ["6.24.1", false, null],
   "@swc/core-darwin-arm64": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -9389,7 +9389,7 @@
   "@algolia/client-insights": ["5.50.2", "trustedPublisher", "Algolia"],
   "karma-coverage": ["2.2.1", false, "SATO taichi <ryushi@gmail.com>"],
   "fast-shallow-equal": ["1.0.0", false, null],
-  "@turf/distance": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/distance": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "scmp": ["2.1.0", false, "Sean Lavine"],
   "react-element-to-jsx-string": ["17.0.1", false, "Algolia, Inc."],
   "html-dom-parser": [
@@ -9411,7 +9411,7 @@
     false,
     "Jeff Williams <jeffrey.l.williams@gmail.com>"
   ],
-  "dependency-tree": ["11.4.0", false, "Joel Kemp <joel@mrjoelkemp.com>"],
+  "dependency-tree": ["11.4.2", false, "Joel Kemp <joel@mrjoelkemp.com>"],
   "@mswjs/cookies": ["1.1.1", false, "Artem Zakharchenko"],
   "react-dnd": ["16.0.1", false, null],
   "@aws-sdk/util-body-length-node": [
@@ -9482,7 +9482,7 @@
   ],
   "when-exit": ["2.1.5", false, null],
   "@swc/core-win32-arm64-msvc": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -9624,7 +9624,7 @@
     "Firebase <firebase-support@google.com>"
   ],
   "@swc/core-darwin-x64": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -9721,7 +9721,7 @@
   ],
   "rehype-parse": ["9.0.1", false, "Titus Wormer <tituswormer@gmail.com>"],
   "mockdate": ["3.0.5", false, "Bob Lauer <rlauer@gmail.com>"],
-  "@turf/bbox": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/bbox": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "lib0": ["0.2.117", false, "Kevin Jahns <kevin.jahns@protonmail.com>"],
   "ansi-gray": ["0.1.1", false, "Jon Schlinkert"],
   "async-exit-hook": [
@@ -9761,7 +9761,7 @@
     "Florian Reiterer <me@florianreiterer.com>"
   ],
   "@typescript/native-preview-linux-x64": [
-    "7.0.0-dev.20260418.1",
+    "7.0.0-dev.20260419.1",
     false,
     "Microsoft Corp."
   ],
@@ -9771,7 +9771,7 @@
     false,
     "Firebase <firebase-support@google.com>"
   ],
-  "module-lookup-amd": ["9.1.1", false, "Joel Kemp <joel@mrjoelkemp.com>"],
+  "module-lookup-amd": ["9.1.2", false, "Joel Kemp <joel@mrjoelkemp.com>"],
   "pug-parser": ["6.0.0", false, "ForbesLindesay"],
   "@expo/sdk-runtime-versions": ["1.0.0", false, "Expo <support@expo.io>"],
   "@firebase/analytics-types": [
@@ -9881,7 +9881,7 @@
   "@react-aria/selection": ["3.28.0", false, null],
   "@parcel/watcher-linux-arm-glibc": ["2.5.6", false, null],
   "@typescript/native-preview": [
-    "7.0.0-dev.20260418.1",
+    "7.0.0-dev.20260419.1",
     false,
     "Microsoft Corp."
   ],
@@ -9920,7 +9920,7 @@
   "@react-native-community/cli-server-api": ["20.1.3", false, null],
   "@rc-component/trigger": ["3.9.0", false, ""],
   "@swc/core-win32-x64-msvc": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -10283,7 +10283,7 @@
   "babel-plugin-check-es2015-constants": ["6.22.0", false, null],
   "@next/swc-darwin-arm64": ["16.2.4", true, null],
   "@tanstack/eslint-plugin-query": [
-    "5.99.1",
+    "5.99.2",
     "trustedPublisher",
     "Eliya Cohen"
   ],
@@ -10346,7 +10346,7 @@
   "@csstools/utilities": ["3.0.0", false, null],
   "unist-util-remove": ["4.0.0", false, "Eugene Sharygin <eush77@gmail.com>"],
   "csv-parser": ["3.2.0", false, "mafintosh"],
-  "@turf/clone": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/clone": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@aws-sdk/client-sns": ["3.1032.0", false, "AWS SDK for JavaScript Team"],
   "@zag-js/radio-group": [
     "1.40.0",
@@ -10480,7 +10480,7 @@
   "babel-helper-optimise-call-expression": ["6.24.1", false, null],
   "@react-aria/listbox": ["3.16.0", false, null],
   "@swc/core-win32-ia32-msvc": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -10546,7 +10546,7 @@
   "@types/events": ["3.0.3", false, null],
   "xmldoc": ["2.0.3", false, "Nick Farina <nfarina@gmail.com>"],
   "@swc/core-linux-arm-gnueabihf": [
-    "1.15.26",
+    "1.15.30",
     "trustedPublisher",
     "강동윤 <kdy1997.dev@gmail.com>"
   ],
@@ -10705,7 +10705,7 @@
     "WalletConnect, Inc. <walletconnect.com>"
   ],
   "@epic-web/invariant": ["1.0.0", false, "Kent C. Dodds <me@kentcdodds.com>"],
-  "oniguruma-parser": ["0.12.1", false, "Steven Levithan"],
+  "oniguruma-parser": ["0.12.2", false, "Steven Levithan"],
   "@react-types/slider": ["3.9.0", false, null],
   "@amplitude/analytics-types": ["2.11.1", "trustedPublisher", "Amplitude Inc"],
   "tcomb": ["3.2.29", false, "Giulio Canti <giulio.canti@gmail.com>"],
@@ -11149,7 +11149,7 @@
   "@pnpm/error": ["1100.0.0", true, null],
   "bodec": ["1.1.0", false, null],
   "@turf/boolean-point-in-polygon": [
-    "7.3.4",
+    "7.3.5",
     "trustedPublisher",
     "Turf Authors"
   ],
@@ -11757,7 +11757,7 @@
     "Segun Adebayo <sage@adebayosegun.com>"
   ],
   "@expo/schema-utils": ["55.0.3", false, null],
-  "@turf/bearing": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/bearing": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@changesets/write": ["0.4.0", false, null],
   "points-on-path": ["0.2.1", false, "Preet Shihn"],
   "xmlhttprequest": ["1.8.0", false, "Dan DeFelippi"],
@@ -11830,7 +11830,7 @@
     false,
     "Brian Vaughn <brian.david.vaughn@gmail.com>"
   ],
-  "@turf/centroid": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/centroid": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "zrender": ["6.0.0", false, null],
   "@react-pdf/font": [
     "4.0.8",
@@ -12005,7 +12005,7 @@
     "Lovell Fuller <npm@lovell.info>"
   ],
   "postcss-selector-matches": ["4.0.0", false, "Maxime Thirouin"],
-  "@turf/area": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/area": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "eta": ["4.5.1", "trustedPublisher", "Ben Gubler <nebrelbug@gmail.com>"],
   "string.prototype.trimleft": [
     "2.1.3",
@@ -12031,11 +12031,11 @@
   "eval": ["0.1.8", false, "Pierre Curto"],
   "@types/wait-on": ["5.3.4", false, null],
   "image-q": ["4.0.0", false, null],
-  "libsodium-wrappers": ["0.8.3", false, "Ahmad Ben Mrad"],
+  "libsodium-wrappers": ["0.8.4", false, "Ahmad Ben Mrad"],
   "hast-to-hyperscript": ["11.0.0", false, null],
   "@stablelib/base64": ["2.0.1", false, "Dmitry Chestnykh"],
   "eslint-plugin-turbo": ["2.9.6", "trustedPublisher", "Vercel"],
-  "libsodium": ["0.8.3", false, "Ahmad Ben Mrad"],
+  "libsodium": ["0.8.4", false, "Ahmad Ben Mrad"],
   "nimma": ["0.7.2", false, "P0lip"],
   "@react-email/tailwind": ["2.0.7", "trustedPublisher", null],
   "@stoplight/spectral-functions": [
@@ -12242,7 +12242,7 @@
   "util-extend": ["1.0.3", false, ""],
   "@fastify/send": ["4.1.0", false, "TJ Holowaychuk <tj@vision-media.ca>"],
   "@react-stately/disclosure": ["3.1.0", false, null],
-  "@turf/destination": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/destination": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@react-pdf/primitives": [
     "4.3.0",
     "trustedPublisher",
@@ -12268,9 +12268,9 @@
   "tree-sitter": ["0.25.0", false, "Max Brunsfeld <maxbrunsfeld@gmail.com>"],
   "remark-footnotes": ["5.0.0", false, null],
   "module-deps": ["6.2.3", false, "James Halliday <mail@substack.net>"],
-  "@turf/line-intersect": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-intersect": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@rolldown/binding-linux-x64-musl": ["1.0.0-rc.16", "trustedPublisher", null],
-  "@turf/boolean-clockwise": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-clockwise": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@ethersproject/sha2": ["5.8.0", false, "Richard Moore <me@ricmoo.com>"],
   "@cucumber/message-streams": [
     "4.1.1",
@@ -12916,7 +12916,7 @@
     "Diego Muracciole <diegomuracciole@gmail.com>"
   ],
   "@storybook/mdx2-csf": ["1.1.0", false, "Michael Shilman <michael@lab80.co>"],
-  "@turf/projection": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/projection": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "sass-graph": ["4.0.1", false, "xzyfer"],
   "protobufjs-cli": [
     "2.0.1",
@@ -13150,7 +13150,7 @@
     false,
     "Gleb Bahmutov <gleb.bahmutov@gmail.com>"
   ],
-  "@turf/rhumb-bearing": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/rhumb-bearing": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cspell/dict-django": [
     "4.1.6",
     true,
@@ -13162,7 +13162,7 @@
     true,
     "Street Side Software <support@streetsidesoftware.nl>"
   ],
-  "@turf/line-segment": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-segment": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cspell/dict-lua": [
     "4.0.8",
     true,
@@ -13284,14 +13284,14 @@
   ],
   "@tanstack/history": ["1.161.6", "trustedPublisher", "Tanner Linsley"],
   "to-space-case": ["1.0.0", false, null],
-  "@turf/rhumb-distance": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/rhumb-distance": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "symbol.prototype.description": [
     "2.0.0",
     false,
     "Jordan Harband <ljharb@gmail.com>"
   ],
   "read-package-tree": ["5.3.1", false, "Isaac Z. Schlueter <i@izs.me>"],
-  "@turf/polygon-to-line": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/polygon-to-line": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@octokit/plugin-paginate-graphql": ["6.0.0", true, null],
   "@react-pdf/stylesheet": [
     "6.2.1",
@@ -13418,13 +13418,13 @@
     false,
     "Andrew Lisowski <lisowski54@gmail.com>"
   ],
-  "@turf/rewind": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/rewind": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@react-aria/disclosure": ["3.2.0", false, null],
   "airbnb-js-shims": ["2.2.1", false, "Jordan Harband <ljharb@gmail.com>"],
   "unescape-js": ["1.1.4", false, "Ivan Akulov <mail@iamakulov.com>"],
   "eslint-plugin-tailwindcss": ["3.18.3", false, "François Massart"],
   "@cspell/cspell-bundled-dicts": ["10.0.0", true, "Jason Dent"],
-  "@turf/nearest-point-on-line": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/nearest-point-on-line": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@axe-core/playwright": ["4.11.2", "trustedPublisher", null],
   "mochawesome-merge": [
     "5.1.1",
@@ -13598,7 +13598,7 @@
   ],
   "typed-styles": ["0.0.8", false, "lttb <kenzhaev.artur@gmail.com>"],
   "@vercel/gatsby-plugin-vercel-builder": ["2.1.19", true, null],
-  "@turf/point-to-line-distance": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/point-to-line-distance": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@gitbeaker/requester-utils": ["43.8.0", false, "Justin Dalrymple"],
   "@jimp/plugins": ["0.22.12", false, ""],
   "@jimp/plugin-gaussian": ["0.22.12", false, ""],
@@ -13624,7 +13624,7 @@
     "Mykola Grybyk <mykola.grybyk@gmail.com>"
   ],
   "node-sarif-builder": [
-    "4.0.0",
+    "4.1.0",
     "trustedPublisher",
     "Nicolas Vuillamy <nicolas.vuillamy@gmail.com>"
   ],
@@ -13634,7 +13634,7 @@
     "Jason Dent <jason@streetsidesoftware.nl>"
   ],
   "@types/mkdirp": ["2.0.0", false, null],
-  "@turf/circle": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/circle": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@types/liftoff": ["4.0.3", false, null],
   "sync-rpc": ["1.3.6", false, "Forbes Lindesay"],
   "@cspell/dict-data-science": [
@@ -13816,7 +13816,7 @@
     "Street Side Software <support@streetsidesoftware.nl>"
   ],
   "postcss-cli": ["11.0.1", false, null],
-  "@turf/along": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/along": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@aws-sdk/eventstream-serde-universal": [
     "3.374.0",
     false,
@@ -13855,7 +13855,7 @@
     "trustedPublisher",
     "Ben Briggs <beneb.info@gmail.com>"
   ],
-  "@turf/length": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/length": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "junit-report-builder": ["5.1.2", false, "David Pärsson <david@parsson.se>"],
   "algoliasearch-helper": ["3.28.1", false, "Algolia Inc."],
   "@jimp/plugin-invert": ["0.22.12", false, ""],
@@ -13902,7 +13902,7 @@
   ],
   "@ionic/utils-process": ["2.1.12", true, "Ionic Team <hi@ionic.io>"],
   "rettime": [
-    "0.11.7",
+    "0.11.8",
     "trustedPublisher",
     "Artem Zakharchenko <kettanaito@gmail.com>"
   ],
@@ -13914,7 +13914,7 @@
   "@serverless/utils": ["6.15.0", false, "Serverless, Inc."],
   "@reactflow/minimap": ["11.7.14", false, null],
   "@oclif/plugin-not-found": ["3.2.80", false, "Salesforce"],
-  "@turf/boolean-point-on-line": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-point-on-line": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@react-types/calendar": ["3.9.0", false, null],
   "ag-grid-react": [
     "35.2.1",
@@ -13948,7 +13948,7 @@
   "@types/amqplib": ["0.10.8", false, null],
   "@react-stately/slider": ["3.8.0", false, null],
   "x-is-string": ["0.1.0", false, "Matt-Esch <matt@mattesch.info>"],
-  "vite-plugin-static-copy": ["4.0.1", "trustedPublisher", "sapphi-red"],
+  "vite-plugin-static-copy": ["4.1.0", "trustedPublisher", "sapphi-red"],
   "@vue/reactivity-transform": ["3.3.13", false, "Evan You"],
   "@solana/options": [
     "6.8.0",
@@ -14012,7 +14012,7 @@
   "@types/he": ["1.2.3", false, null],
   "embla-carousel-autoplay": ["8.6.0", false, "David Jerleke"],
   "tweetnacl-util": ["0.15.1", false, "TweetNaCl-js contributors"],
-  "@turf/intersect": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/intersect": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@sentry/cli-linux-i686": ["3.3.5", false, null],
   "email-addresses": [
     "5.0.0",
@@ -14158,7 +14158,7 @@
   "xhr2": ["0.2.1", false, "Victor Costan <victor@costan.us>"],
   "@ionic/utils-stream": ["3.1.7", true, "Ionic Team <hi@ionic.io>"],
   "lightningcss-win32-arm64-msvc": ["1.32.0", false, null],
-  "@turf/center": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/center": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "mjml-validator": ["5.0.1", false, null],
   "@react-types/tabs": ["3.4.0", false, null],
   "@vanilla-extract/integration": ["8.0.10", "trustedPublisher", "SEEK"],
@@ -14178,7 +14178,7 @@
   "maplibre-gl": ["5.23.0", "trustedPublisher", null],
   "imagemin": ["9.0.1", false, null],
   "ts-proto": ["2.11.6", "trustedPublisher", ""],
-  "@turf/buffer": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/buffer": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@vanilla-extract/private": ["1.0.9", false, "SEEK"],
   "readline2": ["1.0.1", false, "Simon Boudrias <admin@simonboudrias.com>"],
   "@hapi/catbox": ["12.1.1", false, null],
@@ -14244,12 +14244,12 @@
   "radix-ui": ["1.4.3", false, null],
   "micro-ftch": ["0.5.0", true, "Paul Miller"],
   "@material/ripple": ["14.0.0", false, null],
-  "@turf/bbox-polygon": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/bbox-polygon": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@types/jscodeshift": ["17.3.0", false, null],
   "ua-is-frozen": ["0.1.2", true, "Faisal Salman <f@faisalman.com>"],
   "@electron/notarize": ["3.1.1", true, "Samuel Attard"],
   "sqlite3": ["6.0.1", false, "Mapbox"],
-  "@turf/clean-coords": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/clean-coords": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@datadog/datadog-ci-plugin-sarif": ["5.13.1", "trustedPublisher", null],
   "@datadog/datadog-ci-plugin-dora": ["5.13.1", "trustedPublisher", null],
   "@datadog/datadog-ci-plugin-deployment": ["5.13.1", "trustedPublisher", null],
@@ -14306,7 +14306,7 @@
     false,
     "Jordan Harband <ljharb@gmail.com>"
   ],
-  "@turf/union": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/union": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@react-stately/calendar": ["3.10.0", false, null],
   "@netlify/serverless-functions-api": ["2.15.0", false, "Netlify Inc."],
   "hast-util-from-html-isomorphic": [
@@ -14358,12 +14358,12 @@
   "react-map-gl": ["8.1.1", false, null],
   "ncjsm": ["4.3.2", false, "Mariusz Nowak <medyk@medikoo.com>"],
   "rifm": ["0.12.1", false, "istarkov"],
-  "@turf/difference": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/difference": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@types/tern": ["0.23.9", false, null],
   "@koa/cors": ["5.0.0", false, "fengmk2 <fengmk2@gmail.com>"],
   "then-request": ["6.0.2", false, "ForbesLindesay"],
   "cspell-dictionary": ["10.0.0", true, "Jason Dent"],
-  "@turf/boolean-disjoint": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-disjoint": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cspell/dict-fsharp": [
     "1.1.1",
     true,
@@ -14374,7 +14374,7 @@
   "array-tree-filter": ["3.0.3", false, "afc163 <afc163@gmail.com>"],
   "turbo-linux-arm64": ["2.8.17", "trustedPublisher", null],
   "isemail": ["3.2.0", false, null],
-  "@swc/wasm": ["1.15.26", "trustedPublisher", null],
+  "@swc/wasm": ["1.15.30", "trustedPublisher", null],
   "@lerna/child-process": ["7.4.2", false, "Daniel Stockman"],
   "font-awesome": ["4.7.0", false, "Dave Gandy <dave@fontawesome.io>"],
   "@launchdarkly/js-server-sdk-common": ["2.18.4", "trustedPublisher", null],
@@ -14386,7 +14386,7 @@
   "@material/elevation": ["14.0.0", false, null],
   "@types/prompts": ["2.4.9", false, null],
   "is-standalone-pwa": ["0.1.1", true, "Faisal Salman <f@faisalman.com>"],
-  "@turf/rhumb-destination": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/rhumb-destination": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@prisma/prisma-fmt-wasm": [
     "4.17.0-16.27eb2449f178cd9fe1a4b892d732cc4795f75085",
     false,
@@ -14406,7 +14406,7 @@
   "react-aria-components": ["1.17.0", false, null],
   "is-dom": ["1.1.0", false, null],
   "@storybook/preview-web": ["7.6.17", false, null],
-  "@promptbook/utils": ["0.112.0-45", true, "Pavol Hejný <pavol@ptbk.io>"],
+  "@promptbook/utils": ["0.112.0-46", true, "Pavol Hejný <pavol@ptbk.io>"],
   "find-requires": ["1.0.0", false, "Mariusz Nowak <medyk@medikoo.com>"],
   "expo-dev-launcher": ["55.0.28", false, "650 Industries, Inc."],
   "i18next-fs-backend": ["2.6.4", false, null],
@@ -14447,7 +14447,7 @@
   "@react-spring/three": ["10.0.3", false, "Paul Henschel"],
   "@visx/group": ["3.12.0", false, "@hshoff"],
   "@types/nlcst": ["2.0.3", false, null],
-  "@rspack/dev-server": ["1.2.1", "trustedPublisher", null],
+  "@rspack/dev-server": ["2.0.0", "trustedPublisher", null],
   "is-cidr": ["6.0.3", "trustedPublisher", "silverwind <me@silverwind.io>"],
   "vuedraggable": ["2.24.3", false, null],
   "@types/redux-mock-store": ["1.5.0", false, null],
@@ -14550,7 +14550,7 @@
   "@types/yoga-layout": ["3.1.0", false, null],
   "mongodb-memory-server": ["11.0.1", "trustedPublisher", null],
   "proxyquire": ["2.1.3", false, "Thorsten Lorenz"],
-  "@turf/nearest-point-to-line": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/nearest-point-to-line": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@otplib/preset-v11": [
     "13.4.0",
     "trustedPublisher",
@@ -14568,8 +14568,8 @@
     true,
     "Street Side Software <support@streetsidesoftware.nl>"
   ],
-  "@turf/boolean-contains": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/kinks": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-contains": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/kinks": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@types/react-color": ["3.0.13", false, null],
   "@jimp/plugin-shadow": [
     "1.6.1",
@@ -14644,11 +14644,11 @@
   "mjml-spacer": ["5.0.1", false, null],
   "mjml-head-style": ["5.0.1", false, null],
   "db0": ["0.3.4", false, null],
-  "@turf/transform-translate": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/transform-translate": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "faye": ["1.4.1", false, "James Coglan <jcoglan@gmail.com>"],
   "array-map": ["0.0.1", false, "James Halliday <mail@substack.net>"],
   "@smithy/middleware-compression": ["4.3.44", false, null],
-  "@turf/truncate": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/truncate": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@react-aria/virtualizer": ["4.2.0", false, null],
   "wildcard-match": ["5.1.4", false, "Alex Schneider <me@schneider.ax>"],
   "@cspell/dict-java": [
@@ -14720,7 +14720,7 @@
   ],
   "avsc": ["5.7.9", false, "Matthieu Monsch <mtth@apache.org>"],
   "uglify-es": ["3.3.9", false, "Mihai Bazon <mihai.bazon@gmail.com>"],
-  "liquidjs": ["10.25.5", "trustedPublisher", "Harttle"],
+  "liquidjs": ["10.25.6", "trustedPublisher", "Harttle"],
   "@react-native/metro-config": ["0.85.1", false, null],
   "@cspell/dict-monkeyc": [
     "1.0.12",
@@ -14750,7 +14750,7 @@
     false,
     "Marijn Haverbeke <marijn@haverbeke.berlin>"
   ],
-  "@turf/boolean-within": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-within": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@aws-sdk/middleware-endpoint": [
     "3.374.0",
     false,
@@ -14760,7 +14760,7 @@
   "vscode-html-languageservice": ["5.6.2", false, "Microsoft Corporation"],
   "@types/gtag.js": ["0.0.20", false, null],
   "@metamask/safe-event-emitter": ["3.1.2", false, ""],
-  "@turf/transform-scale": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/transform-scale": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "retext-stringify": ["4.0.0", false, "Titus Wormer <tituswormer@gmail.com>"],
   "@electron/osx-sign": ["2.4.0", "trustedPublisher", "electron"],
   "p-memoize": ["8.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
@@ -14809,17 +14809,17 @@
   "@microsoft/signalr": ["10.0.0", false, "Microsoft"],
   "array-reduce": ["0.0.0", false, "James Halliday <mail@substack.net>"],
   "saslprep": ["1.0.3", false, "Dmitry Tsvettsikh <me@reklatsmasters.com>"],
-  "@turf/convex": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/convex": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "babel-preset-env": ["1.7.0", false, "Henry Zhu <hi@henryzoo.com>"],
   "jschardet": ["3.1.4", false, "António Afonso"],
-  "@turf/combine": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/combine": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@humanwhocodes/gitignore-to-minimatch": ["1.0.2", false, "Nicholas C. Zaks"],
   "csprng": ["0.1.2", false, "James Coglan <jcoglan@gmail.com>"],
   "read-installed": ["4.0.3", false, "Isaac Z. Schlueter <i@izs.me>"],
   "rrweb": ["2.0.0-alpha.4", false, "yanzhen@smartx.com"],
   "humps": ["2.0.1", false, "Dom Christie"],
   "@atlaskit/tokens": ["13.0.0", false, "Atlassian Pty Ltd"],
-  "@turf/line-split": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-split": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "promisepipe": ["3.0.0", false, "Esa-Matti Suuronen"],
   "ember-cli-babel": ["8.3.1", "trustedPublisher", "Gordon Kristan"],
   "shell-exec": ["1.1.2", false, "Tiaan du Plessis"],
@@ -14845,7 +14845,7 @@
     "trustedPublisher",
     "Anthony Fu <anthonyfu117@hotmail.com>"
   ],
-  "@turf/clusters-kmeans": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/clusters-kmeans": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@tsconfig/node20": ["20.1.9", true, null],
   "@nrwl/cypress": ["19.8.4", true, "Victor Savkin"],
   "stringify-package": ["1.0.1", false, "Kat Marchán <kzm@zkat.tech>"],
@@ -14872,7 +14872,7 @@
   "@types/secp256k1": ["4.0.7", false, null],
   "webpack-chain": ["6.5.1", false, "Eli Perelman <eli@eliperelman.com>"],
   "@segment/isodate": ["1.0.3", false, "Segment <friends@segment.com>"],
-  "@turf/simplify": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/simplify": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "duck": ["0.1.12", false, "Michael Williamson <mike@zwobble.org>"],
   "hogan.js": ["3.0.2", false, "Twitter Inc."],
   "@oclif/command": ["1.8.36", false, "Salesforce"],
@@ -14898,7 +14898,7 @@
     "Devon Govett <devongovett@gmail.com>"
   ],
   "@noble/secp256k1": ["3.1.0", "trustedPublisher", "Paul Miller"],
-  "@turf/center-of-mass": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/center-of-mass": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "nofilter": [
     "6.4.1",
     "trustedPublisher",
@@ -14932,7 +14932,7 @@
     false,
     "OpenTelemetry Authors"
   ],
-  "@turf/line-chunk": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-chunk": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@types/webpack-bundle-analyzer": ["4.7.0", false, null],
   "apollo-server-express": [
     "3.13.0",
@@ -14944,10 +14944,10 @@
   "@remix-run/server-runtime": ["2.17.4", "trustedPublisher", null],
   "vscode-languageclient": ["9.0.1", false, "Microsoft Corporation"],
   "is-mobile": ["5.0.0", false, "Julian Gruber <julian@juliangruber.com>"],
-  "@turf/nearest-point": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/nearest-point": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@mdx-js/loader": ["3.1.1", false, "John Otander <johnotander@gmail.com>"],
   "@types/passport-local": ["1.0.38", false, null],
-  "@turf/boolean-overlap": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-overlap": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@segment/isodate-traverse": [
     "1.1.1",
     false,
@@ -14971,7 +14971,7 @@
   "@parcel/workers": ["2.16.4", false, null],
   "@bugsnag/core": ["8.9.0", false, "Bugsnag"],
   "new-date": ["1.0.3", false, "Segment <friends@segment.com>"],
-  "sqs-consumer": ["14.2.6", "trustedPublisher", null],
+  "sqs-consumer": ["14.2.8", "trustedPublisher", null],
   "mjml-image": ["5.0.1", false, null],
   "react-popper-tooltip": [
     "4.4.2",
@@ -14983,9 +14983,9 @@
   "rollup-plugin-babel": ["4.4.0", false, "Rich Harris"],
   "@material/touch-target": ["14.0.0", false, null],
   "coffee-script": ["1.12.7", false, "Jeremy Ashkenas"],
-  "@turf/explode": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/explode": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "nanospinner": ["1.2.2", false, "Usman Yunusov"],
-  "@turf/mask": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/mask": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cspell/dict-gaming-terms": [
     "1.1.2",
     true,
@@ -15003,7 +15003,7 @@
   "@aws-sdk/md5-js": ["3.374.0", false, "AWS SDK for JavaScript Team"],
   "@types/pixelmatch": ["5.2.6", false, null],
   "@types/draco3d": ["1.4.10", false, null],
-  "@turf/square": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/square": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cspell/dict-svelte": [
     "1.0.7",
     true,
@@ -15050,7 +15050,7 @@
     "Jason Johnston <jason.johnston@protectwise.com>"
   ],
   "mjml-cli": ["5.0.1", false, null],
-  "@turf/line-overlap": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-overlap": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "lodash.unescape": [
     "4.0.1",
     false,
@@ -15060,7 +15060,7 @@
   "electron": ["41.2.1", false, "Electron Community"],
   "userhome": ["1.0.1", false, "Kyle Robinson Young <kyle@dontkry.com>"],
   "@apm-js-collab/code-transformer": ["0.12.0", "trustedPublisher", null],
-  "@turf/line-to-polygon": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-to-polygon": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "is-lite": [
     "2.0.0",
     "trustedPublisher",
@@ -15086,7 +15086,7 @@
   ],
   "@types/canvas-confetti": ["1.9.0", false, null],
   "@tiptap/extension-list": ["3.22.4", "trustedPublisher", null],
-  "@turf/unkink-polygon": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/unkink-polygon": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "essentials": ["1.2.0", false, "Mariusz Nowak <medyk@medikoo.com>"],
   "@emotion/styled-base": ["11.0.0", false, null],
   "@react-native-community/cli-config-apple": ["20.1.3", false, null],
@@ -15097,10 +15097,10 @@
   ],
   "@tsconfig/node18": ["18.2.6", true, null],
   "@react-navigation/stack": ["7.8.10", false, null],
-  "@turf/flatten": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/flatten": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@rrweb/types": ["2.0.0-alpha.20", false, null],
   "rndm": ["1.2.0", false, "Jonathan Ong <me@jongleberry.com>"],
-  "@turf/point-grid": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/point-grid": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "stylelint-prettier": ["5.0.3", false, "Ben Scott"],
   "@walletconnect/keyvaluestorage": [
     "1.1.1",
@@ -15125,7 +15125,7 @@
     false,
     "Ankeet Maini <ankeet.maini@gmail.com>"
   ],
-  "@turf/tag": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/tag": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@vercel/stega": ["1.1.0", false, null],
   "redux-devtools-extension": [
     "2.13.9",
@@ -15148,9 +15148,9 @@
     "trustedPublisher",
     "Tanner Linsley"
   ],
-  "@turf/line-arc": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-arc": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "async-each-series": ["1.1.0", false, "jb55"],
-  "@turf/line-slice-along": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-slice-along": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "probe-image-size": ["7.2.3", false, null],
   "mdast-util-compact": [
     "5.0.0",
@@ -15160,10 +15160,10 @@
   "spacetrim": ["0.13.0", false, ""],
   "@techteamer/ocsp": ["1.0.1", false, "Fedor Indutny <fedor@indutny.com>"],
   "convict": ["6.2.5", false, "Lloyd Hilaiel <lloyd@hilaiel.com>"],
-  "@turf/bbox-clip": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/midpoint": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/bbox-clip": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/midpoint": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "process-utils": ["4.0.0", false, "Mariusz Nowak <medyk@medikoo.com>"],
-  "@turf/flip": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/flip": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@oclif/plugin-warn-if-update-available": ["3.1.60", false, "Salesforce"],
   "@langchain/langgraph": ["1.2.9", "trustedPublisher", "LangChain"],
   "mjml-migrate": ["4.18.0", false, "Nicolas Garnier"],
@@ -15188,8 +15188,8 @@
     "Sebastian McKenzie <sebmck@gmail.com>"
   ],
   "@visx/shape": ["3.12.0", false, "@hshoff"],
-  "@turf/points-within-polygon": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/envelope": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/points-within-polygon": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/envelope": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "workerd": ["1.20260418.1", "trustedPublisher", null],
   "@metamask/rpc-errors": ["7.0.3", false, null],
   "vue-devtools-stub": ["0.1.0", false, null],
@@ -15214,7 +15214,7 @@
   "stream-promise": ["3.2.0", false, "Mariusz Nowak <medyk@medikoo.com>"],
   "ts-error": ["1.0.6", false, "Frédérique Mittelstaedt <npm@gfm.io>"],
   "remark-breaks": ["4.0.0", false, "Titus Wormer <tituswormer@gmail.com>"],
-  "@turf/line-slice": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-slice": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@azure/ms-rest-js": [
     "2.7.0",
     false,
@@ -15223,7 +15223,7 @@
   "@tiptap/extension-table-header": ["3.22.4", "trustedPublisher", null],
   "diacritics": ["1.3.0", false, "Andrew Kelley"],
   "http-status": ["2.1.0", false, "David Worms <david@adaltas.com>"],
-  "@turf/point-on-feature": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/point-on-feature": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "detect-gpu": ["5.0.70", false, "Tim van Scherpenzeel"],
   "@chakra-ui/theme-tools": [
     "2.2.6",
@@ -15240,8 +15240,8 @@
   "cli": ["1.0.1", false, "Chris O'Hara <cohara87@gmail.com>"],
   "@types/shelljs": ["0.10.0", false, null],
   "webgl-constants": ["1.1.1", false, "Tim van Scherpenzeel"],
-  "@turf/turf": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/polygon-tangents": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/turf": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/polygon-tangents": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@bugsnag/node": ["8.9.0", false, "Bugsnag"],
   "@sanity/client": ["7.21.0", true, "Sanity.io <hello@sanity.io>"],
   "nwmatcher": ["1.4.4", false, "Diego Perini <diego.perini@gmail.com>"],
@@ -15268,8 +15268,8 @@
   "is-png": ["3.0.1", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@material/menu-surface": ["14.0.0", false, null],
   "react-spring": ["10.0.3", false, "Paul Henschel"],
-  "@turf/line-offset": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/bezier-spline": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/line-offset": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/bezier-spline": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "mixme": ["2.0.2", false, "David Worms <david@adaltas.com>"],
   "@chakra-ui/anatomy": [
     "2.3.4",
@@ -15278,7 +15278,7 @@
   ],
   "drizzle-zod": ["0.8.3", true, "Drizzle Team"],
   "@gorhom/portal": ["1.0.14", false, "Mo Gorhom"],
-  "@turf/clusters-dbscan": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/clusters-dbscan": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "ringbufferjs": ["2.0.0", false, "Jano González <info@janogonzalez.com>"],
   "eslint-plugin-react-compiler": ["19.1.0-rc.2", false, null],
   "useragent": ["2.3.0", false, "Arnout Kazemier"],
@@ -15293,19 +15293,19 @@
     "Jack Giffin <wowzeryest@gmail.com>"
   ],
   "@angular-eslint/schematics": ["21.3.1", "trustedPublisher", null],
-  "@turf/great-circle": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/great-circle": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@graphql-codegen/typescript-react-apollo": [
-    "4.4.1",
+    "4.4.2",
     "trustedPublisher",
     null
   ],
   "as-array": ["2.0.0", false, "Scott Corgan"],
-  "@turf/collect": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/collect": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@playwright/mcp": ["0.0.70", "trustedPublisher", "Microsoft Corporation"],
   "react-portal": ["4.3.0", false, "Vojtech Miksu <vojtech@miksu.cz>"],
   "jade": ["1.11.0", false, "TJ Holowaychuk <tj@vision-media.ca>"],
   "glsl-noise": ["0.0.0", false, "Ian McEwan, Ashima Arts, Stefan Gustavson"],
-  "@turf/isolines": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/isolines": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@parcel/plugin": ["2.16.4", false, null],
   "@oxc-transform/binding-linux-x64-musl": [
     "0.126.0",
@@ -15351,7 +15351,7 @@
     false,
     "Andrew Carlson <acarl005@g.ucla.edu>"
   ],
-  "@turf/concave": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/concave": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "babel-preset-stage-2": [
     "6.24.1",
     false,
@@ -15368,9 +15368,9 @@
   ],
   "@aws-sdk/client-rds": ["3.1032.0", false, "AWS SDK for JavaScript Team"],
   "p-some": ["7.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
-  "@turf/hex-grid": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/transform-rotate": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/clusters": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/hex-grid": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/transform-rotate": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/clusters": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "bin-wrapper": [
     "4.1.0",
     false,
@@ -15380,7 +15380,7 @@
   "babel-plugin-transform-decorators": ["6.24.1", false, null],
   "@material/snackbar": ["14.0.0", false, null],
   "@bazel/runfiles": ["6.5.0", false, null],
-  "@turf/ellipse": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/ellipse": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "videojs-font": ["4.2.0", false, "Matthew McClure <m@mmcc.io>"],
   "fast-loops": ["1.1.4", false, "robinweser <contact@weser.io>"],
   "@simplewebauthn/browser": [
@@ -15389,7 +15389,7 @@
     "Matthew Miller <matthew@millerti.me>"
   ],
   "unraw": ["3.0.0", false, "Ian Sanders"],
-  "@turf/interpolate": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/interpolate": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@material/form-field": ["14.0.0", false, null],
   "@google-cloud/cloud-sql-connector": ["1.10.0", false, "Google Inc."],
   "is-relative-path": ["2.0.0", false, "Joel Kemp <joel@mrjoelkemp.com>"],
@@ -15411,7 +15411,7 @@
   "@react-hook/latest": ["1.0.3", false, "Jared Lunde <jared.lunde@gmail.com>"],
   "on-change": ["6.0.2", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@nx/nx-linux-arm64-gnu": ["22.6.5", "trustedPublisher", null],
-  "@turf/boolean-crosses": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-crosses": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "gherkin": ["9.0.0", false, "Aslak Hellesøy"],
   "continuable-cache": ["0.3.1", false, "Raynos <raynos2@gmail.com>"],
   "@types/pug": ["2.0.10", false, null],
@@ -15425,10 +15425,10 @@
   "camera-controls": ["3.1.2", false, "Yomotsu"],
   "exegesis": ["4.3.0", false, "Jason Walton"],
   "react-json-view": ["1.21.3", false, "Mac Gainor"],
-  "@turf/boolean-equal": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-equal": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@jsii/check-node": ["1.128.0", false, "Amazon Web Services"],
   "tree-changes": ["0.11.3", false, "Gil Barbara <gilbarbara@gmail.com>"],
-  "@turf/triangle-grid": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/triangle-grid": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "time-zone": ["2.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "ioredis-mock": [
     "8.13.1",
@@ -15437,11 +15437,11 @@
   ],
   "postinstall-postinstall": ["2.1.0", false, "David Sheldrick"],
   "format-util": ["1.0.5", false, "muji <noop@xpm.io>"],
-  "@turf/tesselate": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/tesselate": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@material/dialog": ["14.0.0", false, null],
   "jsonrepair": ["3.14.0", false, "Jos de Jong"],
-  "@turf/isobands": ["7.3.4", "trustedPublisher", "Turf Authors"],
-  "@turf/planepoint": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/isobands": ["7.3.5", "trustedPublisher", "Turf Authors"],
+  "@turf/planepoint": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "topo": ["3.0.3", false, null],
   "@nestjs/graphql": ["13.2.5", false, "Kamil Mysliwiec"],
   "@dimforge/rapier3d-compat": ["0.19.3", false, null],
@@ -15470,17 +15470,17 @@
     false,
     "Andrea Cardaci <cyrus.and@gmail.com>"
   ],
-  "@turf/shortest-path": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/shortest-path": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "p-any": ["4.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@types/anymatch": ["3.0.4", false, null],
   "@types/reach__router": ["1.3.15", false, null],
-  "@turf/boolean-parallel": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-parallel": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@monogrid/gainmap-js": [
     "3.4.0",
     "trustedPublisher",
     "MONOGRID <gainmap@monogrid.com>"
   ],
-  "@turf/voronoi": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/voronoi": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "file-url": ["4.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@ts-graphviz/ast": [
     "3.0.6",
@@ -15560,7 +15560,7 @@
   ],
   "jest-expo": ["55.0.16", false, null],
   "skmeans": ["0.11.3", false, "David Gómez Matarrodona <solzimer@gmail.com>"],
-  "@turf/tin": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/tin": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cspell/cspell-pipe": [
     "10.0.0",
     true,
@@ -15590,7 +15590,7 @@
   "highcharts-react-official": ["3.2.3", false, null],
   "@deca-ui/react": null,
   "vite-plugin-vue-inspector": ["5.4.0", false, "webfansplz"],
-  "@turf/random": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/random": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cspell/dict-kotlin": [
     "1.1.1",
     true,
@@ -15694,7 +15694,7 @@
   "fast-stable-stringify": ["1.0.0", false, "Nicky Out"],
   "broccoli-funnel": ["3.0.8", false, "Robert Jackson"],
   "jsqr": ["1.4.0", false, null],
-  "@turf/polygonize": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/polygonize": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "ts-proto-descriptors": ["2.1.0", false, ""],
   "glur": ["1.1.2", false, null],
   "libnpmsearch": ["9.0.1", false, "GitHub Inc."],
@@ -15727,9 +15727,9 @@
     true,
     "Invertase <oss@invertase.io>"
   ],
-  "@turf/center-mean": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/center-mean": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "npm-profile": ["12.0.1", "trustedPublisher", "GitHub Inc."],
-  "@turf/center-median": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/center-median": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "speed-measure-webpack-plugin": [
     "1.6.0",
     false,
@@ -15843,7 +15843,7 @@
   "@material-ui/icons": ["4.11.3", false, "Material-UI Team"],
   "@parcel/fs": ["2.16.4", false, null],
   "uuidv7": ["1.2.1", false, "LiosK <contact@mail.liosk.net>"],
-  "@turf/sector": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/sector": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "has-color": ["0.2.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@parcel/markdown-ansi": ["2.16.4", false, null],
   "ag-grid-enterprise": [
@@ -15878,7 +15878,7 @@
   ],
   "@pnpm/read-project-manifest": ["1001.2.6", false, null],
   "slate-history": ["0.113.1", false, null],
-  "@turf/square-grid": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/square-grid": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "eslint-plugin-json": [
     "4.0.1",
     false,
@@ -15895,7 +15895,7 @@
   "unist-util-filter": ["5.0.1", false, "Eugene Sharygin <eush77@gmail.com>"],
   "@react-native/eslint-plugin": ["0.85.1", false, null],
   "@tsconfig/node22": ["22.0.5", true, null],
-  "@turf/dissolve": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/dissolve": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "ml-array-max": ["2.0.0", false, "Michaël Zasso"],
   "ml-array-min": ["2.0.0", false, "Michaël Zasso"],
   "thriftrw": ["3.11.4", false, "Lei Zhao <leizha@uber.com>"],
@@ -15926,7 +15926,7 @@
   ],
   "rrdom": ["0.1.7", false, null],
   "@types/lodash.isequal": ["4.5.8", false, null],
-  "@turf/sample": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/sample": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@csstools/postcss-color-mix-variadic-function-arguments": [
     "2.0.3",
     false,
@@ -15996,7 +15996,7 @@
     "React Training <hello@reacttraining.com>"
   ],
   "@turf/standard-deviational-ellipse": [
-    "7.3.4",
+    "7.3.5",
     "trustedPublisher",
     "Turf Authors"
   ],
@@ -16249,7 +16249,7 @@
   "enzyme-to-json": ["3.6.2", false, "Adrien Antoine <adriantoine@gmail.com>"],
   "hexer": ["1.5.0", false, "Joshua T Corbin <joshua@wunjo.org>"],
   "@ckeditor/ckeditor5-undo": ["48.0.0", false, "CKSource"],
-  "@turf/boolean-intersects": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-intersects": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "umask": ["1.1.0", false, "Sam Mikes <smikes@cubane.com>"],
   "json-2-csv": [
     "5.5.10",
@@ -16308,7 +16308,7 @@
     "OpenTelemetry Authors"
   ],
   "@tanstack/query-persist-client-core": [
-    "5.99.1",
+    "5.99.2",
     "trustedPublisher",
     "tannerlinsley"
   ],
@@ -16682,7 +16682,7 @@
   "web3-eth-abi": ["4.4.1", false, "ChainSafe Systems"],
   "octokit-pagination-methods": ["1.1.0", false, "Gregor Martynus"],
   "@types/config": ["4.4.0", false, null],
-  "feed": ["5.2.0", false, "Jean-Philippe Monette <contact@jpmonette.net>"],
+  "feed": ["5.2.1", false, "Jean-Philippe Monette <contact@jpmonette.net>"],
   "@fortawesome/free-brands-svg-icons": [
     "7.2.0",
     false,
@@ -17058,12 +17058,12 @@
     "Vladimir Gorej"
   ],
   "node-jose": ["2.2.0", false, "Cisco Systems, Inc. <https://www.cisco.com>"],
-  "@turf/moran-index": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/moran-index": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "libnpmpack": ["9.1.5", false, "GitHub Inc."],
   "@lerna/validation-error": ["6.4.1", false, "Daniel Stockman"],
   "bcp-47": ["2.1.0", false, "Titus Wormer <tituswormer@gmail.com>"],
   "@verdaccio/file-locking": [
-    "10.3.1",
+    "10.3.2",
     false,
     "Juan Picado <juanpicado19@gmail.com>"
   ],
@@ -17232,7 +17232,7 @@
   "@vimeo/player": ["2.30.3", false, "Vimeo <https://vimeo.com>"],
   "esbuild-sunos-64": ["0.15.18", false, null],
   "@azure/msal-react": ["5.3.0", false, "Microsoft <nugetaad@microsoft.com>"],
-  "@turf/angle": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/angle": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@cypress/grep": ["6.0.0", false, null],
   "@visx/event": ["3.12.0", false, "@hshoff"],
   "@microsoft/applicationinsights-shims": [
@@ -17362,7 +17362,7 @@
   "react-scroll": ["1.9.3", false, ""],
   "meriyah": ["7.1.0", "trustedPublisher", "Kenny F."],
   "eslint-config-expo": ["55.0.0", false, "Expo"],
-  "@turf/distance-weight": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/distance-weight": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "youtube-player": ["5.6.0", false, "Gajus Kuizinas <gajus@anuary.com>"],
   "@material-ui/lab": ["4.0.0-alpha.61", false, "Material-UI Team"],
   "@ckeditor/ckeditor5-list": ["48.0.0", false, "CKSource"],
@@ -17579,7 +17579,7 @@
     "trustedPublisher",
     "Marco Schumacher <marco@schumacher.dev>"
   ],
-  "@turf/rectangle-grid": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/rectangle-grid": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "walk-back": ["5.1.2", false, "Lloyd Brookes <opensource@75lb.com>"],
   "@swagger-api/apidom-parser-adapter-openapi-yaml-2": [
     "1.10.2",
@@ -17608,7 +17608,7 @@
     false,
     "Irakli Gozalishvili <dev@gozala.io>"
   ],
-  "@secretlint/core": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/core": ["12.0.1", "trustedPublisher", "azu"],
   "@apollo/subgraph": [
     "2.13.3",
     "trustedPublisher",
@@ -17626,7 +17626,7 @@
   "@remix-run/web-fetch": ["4.4.2", false, "David Frank"],
   "cypress-axe": ["1.7.0", false, null],
   "@pnpm/graceful-fs": ["1000.1.0", false, null],
-  "@turf/polygon-smooth": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/polygon-smooth": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@types/zxcvbn": ["4.4.5", false, null],
   "@tanstack/form-core": ["1.29.0", "trustedPublisher", "tannerlinsley"],
   "@contentful/content-source-maps": [
@@ -17772,7 +17772,7 @@
   "spex": ["4.1.0", false, "Vitaly Tomilov <vitaly.tomilov@gmail.com>"],
   "proxy-middleware": ["0.15.0", false, "Andrew Kelley"],
   "react-konva": ["19.2.3", false, null],
-  "intl-tel-input": ["27.0.11", false, "Jack O'Connor"],
+  "intl-tel-input": ["27.1.0", "trustedPublisher", "Jack O'Connor"],
   "is-running": ["2.1.0", false, "Noah Isaacson"],
   "ag-charts-locale": [
     "13.2.1",
@@ -17782,7 +17782,7 @@
   "esbuild-openbsd-64": ["0.15.18", false, null],
   "@uppy/utils": ["7.2.0", "trustedPublisher", null],
   "minimisted": ["2.0.1", false, "Yoshiya Hinosawa <stibium121@gmail.com>"],
-  "@secretlint/types": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/types": ["12.0.1", "trustedPublisher", "azu"],
   "@lerna/package-graph": ["6.4.1", false, "Daniel Stockman"],
   "weakmap-polyfill": [
     "2.0.4",
@@ -17797,7 +17797,7 @@
   "primeng": ["21.1.6", false, "PrimeTek Informatics"],
   "@mui/x-date-pickers-pro": ["9.0.2", "trustedPublisher", "MUI Team"],
   "@applitools/logger": [
-    "2.2.10",
+    "2.2.11",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -17878,7 +17878,7 @@
   "@vue/babel-preset-app": ["5.0.9", false, "Evan You"],
   "exifr": ["7.1.3", false, "Mike Kovarik"],
   "@applitools/utils": [
-    "1.14.3",
+    "1.14.4",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -17985,7 +17985,7 @@
   "@fullcalendar/react": ["6.1.20", false, null],
   "config-file-ts": ["0.2.8-rc1", false, "lee mighdoll"],
   "is-odd": ["3.0.1", false, "Jon Schlinkert"],
-  "@middy/core": ["7.2.3", "trustedPublisher", "Middy contributors"],
+  "@middy/core": ["7.3.0", "trustedPublisher", "Middy contributors"],
   "jsrsasign": ["11.1.3", false, "Kenji Urushima"],
   "drizzle-orm": ["0.45.2", "trustedPublisher", "Drizzle Team"],
   "aws-crt": ["1.31.0", false, null],
@@ -17999,7 +17999,7 @@
   "babel-cli": ["6.26.0", false, "Sebastian McKenzie <sebmck@gmail.com>"],
   "vite-plugin-eslint": ["1.8.1", false, "Xiang Gao"],
   "@tanstack/react-query-persist-client": [
-    "5.99.1",
+    "5.99.2",
     "trustedPublisher",
     "tannerlinsley"
   ],
@@ -18013,11 +18013,11 @@
     false,
     "Brent Vatne <brentvatne@gmail.com>"
   ],
-  "@secretlint/config-creator": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/config-creator": ["12.0.1", "trustedPublisher", "azu"],
   "@loadable/component": ["5.16.7", false, "Greg Bergé <berge.greg@gmail.com>"],
   "@ckeditor/ckeditor5-basic-styles": ["48.0.0", false, "CKSource"],
   "@secretlint/secretlint-rule-preset-recommend": [
-    "11.7.1",
+    "12.0.1",
     "trustedPublisher",
     "azu"
   ],
@@ -18031,7 +18031,7 @@
     false,
     "Daniel Stockman <daniel.stockman@gmail.com>"
   ],
-  "@types/web": ["0.0.345", false, null],
+  "@types/web": ["0.0.346", false, null],
   "espurify": ["3.2.0", false, "Takuto Wada <takuto.wada@gmail.com>"],
   "zlibjs": ["0.3.1", false, "Yuta Imaya <imaya.devel@gmail.com>"],
   "@nx/esbuild": ["22.6.5", "trustedPublisher", "Victor Savkin"],
@@ -18421,7 +18421,7 @@
   ],
   "@contrast/fn-inspect": ["5.0.2", false, "Contrast Security"],
   "@parcel/core": ["2.16.4", false, null],
-  "vue-component-meta": ["3.2.6", "trustedPublisher", null],
+  "vue-component-meta": ["3.2.7", "trustedPublisher", null],
   "buffer-json": ["2.0.0", false, "JP Richardson"],
   "@tanstack/react-form": ["1.29.0", "trustedPublisher", "tannerlinsley"],
   "babel-plugin-transform-function-bind": ["6.22.0", false, null],
@@ -19069,7 +19069,7 @@
   "@node-ipc/js-queue": ["2.0.3", false, "Brandon Nozaki Miller"],
   "code-red": ["1.0.4", false, null],
   "expo-symbols": ["55.0.7", false, "650 Industries, Inc."],
-  "@turf/geojson-rbush": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/geojson-rbush": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@lezer/php": ["1.0.5", false, "Marijn Haverbeke <marijn@haverbeke.berlin>"],
   "@types/cypress": ["1.1.6", false, null],
   "csurf": ["1.11.0", false, "Jonathan Ong <me@jongleberry.com>"],
@@ -19155,7 +19155,7 @@
     "Guillaume Chau <guillaume.b.chau@gmail.com>"
   ],
   "@graphql-codegen/near-operation-file-preset": [
-    "5.0.0",
+    "5.0.1",
     "trustedPublisher",
     null
   ],
@@ -19339,7 +19339,7 @@
     "trustedPublisher",
     "Gleb Bahmutov <gleb.bahmutov@gmail.com>"
   ],
-  "secretlint": ["11.7.1", "trustedPublisher", "azu"],
+  "secretlint": ["12.0.1", "trustedPublisher", "azu"],
   "expo-localization": ["55.0.13", false, "650 Industries, Inc."],
   "@tree-sitter-grammars/tree-sitter-yaml": [
     "0.7.1",
@@ -19468,7 +19468,7 @@
   ],
   "@react-native/debugger-shell": ["0.85.1", false, null],
   "@applitools/screenshoter": [
-    "3.12.17",
+    "3.12.18",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -19574,14 +19574,14 @@
     false,
     "AWS SDK for JavaScript Team"
   ],
-  "@secretlint/profiler": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/profiler": ["12.0.1", "trustedPublisher", "azu"],
   "@braintree/wrap-promise": [
     "3.0.4",
     false,
     "Braintree <code@getbraintree.com>"
   ],
   "@applitools/spec-driver-webdriver": [
-    "1.5.9",
+    "1.5.10",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -19607,7 +19607,7 @@
   "@googlemaps/url-signature": ["1.0.40", false, "Justin Poehnelt"],
   "@stdlib/array-float64": ["0.2.3", false, "The Stdlib Authors"],
   "@applitools/nml-client": [
-    "1.11.23",
+    "1.11.24",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -19631,7 +19631,7 @@
   ],
   "@types/json2csv": ["5.0.7", false, null],
   "@huggingface/jinja": ["0.5.7", "trustedPublisher", "Hugging Face"],
-  "@applitools/req": ["1.9.2", false, "Applitools Team <team@applitools.com>"],
+  "@applitools/req": ["1.9.3", false, "Applitools Team <team@applitools.com>"],
   "@stdlib/math-base-assert-is-nan": ["0.2.3", false, "The Stdlib Authors"],
   "@tailwindcss/cli": ["4.2.2", true, null],
   "size-limit": ["12.1.0", false, "Andrey Sitnik <andrey@sitnik.es>"],
@@ -19686,7 +19686,7 @@
   "@jimp/js-png": ["1.6.1", false, "Andrew Lisowski <lisowski54@gmail.com>"],
   "@leafygreen-ui/typography": ["22.2.4", "trustedPublisher", null],
   "@applitools/core-base": [
-    "1.32.4",
+    "1.32.5",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -19782,7 +19782,7 @@
     "Evan Hahn <me@evanhahn.com>"
   ],
   "@applitools/ufg-client": [
-    "1.20.2",
+    "1.20.3",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -20047,9 +20047,9 @@
   "@turf/jsts": ["2.7.2", false, "Björn Harrtell <bjorn@wololo.org>"],
   "@csstools/postcss-color-function-display-p3-linear": ["2.0.3", false, null],
   "tesseract.js-core": ["6.1.2", false, "antimatter15"],
-  "@secretlint/config-loader": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/config-loader": ["12.0.1", "trustedPublisher", "azu"],
   "tsdown": ["0.21.9", "trustedPublisher", "Kevin Deng <sxzz@sxzz.moe>"],
-  "@secretlint/source-creator": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/source-creator": ["12.0.1", "trustedPublisher", "azu"],
   "@percy/cli-command": ["1.31.11", false, null],
   "@edge-runtime/cookies": ["6.0.0", false, null],
   "@lmdb/lmdb-darwin-arm64": ["3.5.4", false, "Kris Zyp"],
@@ -20058,8 +20058,8 @@
     false,
     "The Stdlib Authors"
   ],
-  "@secretlint/formatter": ["11.7.1", "trustedPublisher", "azu"],
-  "@secretlint/node": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/formatter": ["12.0.1", "trustedPublisher", "azu"],
+  "@secretlint/node": ["12.0.1", "trustedPublisher", "azu"],
   "@stdlib/string-format": ["0.2.3", false, "The Stdlib Authors"],
   "lossless-json": ["4.3.0", false, "Jos de Jong"],
   "@arcanis/slice-ansi": ["2.0.1", false, null],
@@ -20129,10 +20129,10 @@
   "chartjs-adapter-date-fns": ["3.0.0", false, null],
   "@types/mjml-core": ["4.15.2", false, null],
   "unicode-emoji-utils": ["1.3.1", false, "Minh Cung"],
-  "@turf/quadrat-analysis": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/quadrat-analysis": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@stdlib/array-float32": ["0.2.3", false, "The Stdlib Authors"],
   "@turf/nearest-neighbor-analysis": [
-    "7.3.4",
+    "7.3.5",
     "trustedPublisher",
     "Turf Authors"
   ],
@@ -20143,7 +20143,7 @@
   "@chakra-ui/tabs": ["3.0.0", false, "Segun Adebayo <sage@adebayosegun.com>"],
   "@uppy/core": ["5.2.0", false, null],
   "@applitools/tunnel-client": [
-    "1.11.9",
+    "1.11.10",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -20358,7 +20358,7 @@
   "@aws-sdk/rds-signer": ["3.1032.0", false, "AWS SDK for JavaScript Team"],
   "url-set-query": ["1.0.0", false, "Matt DesLauriers <dave.des@gmail.com>"],
   "@applitools/ec-client": [
-    "1.12.24",
+    "1.12.25",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -20370,7 +20370,7 @@
     false,
     "John-David Dalton <john.david.dalton@gmail.com>"
   ],
-  "@secretlint/resolver": ["11.7.1", "trustedPublisher", "azu"],
+  "@secretlint/resolver": ["12.0.1", "trustedPublisher", "azu"],
   "bip66": ["2.0.0", false, "Daniel Cousens"],
   "@codesandbox/sandpack-react": ["2.20.0", false, "CodeSandbox"],
   "@storybook/expect": ["28.1.3-5", false, null],
@@ -20384,7 +20384,7 @@
   "imagemin-pngquant": ["10.0.0", false, null],
   "relative": ["3.0.2", false, "Jon Schlinkert"],
   "@applitools/driver": [
-    "1.25.4",
+    "1.25.5",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -20402,7 +20402,7 @@
   "@manypkg/tools": ["2.1.1", "trustedPublisher", null],
   "@ckeditor/ckeditor5-adapter-ckfinder": ["48.0.0", false, "CKSource"],
   "tiny-hashes": ["1.0.1", false, "JT <jt@gosquared.com>"],
-  "@turf/boolean-valid": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-valid": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "logrocket": ["12.1.0", false, "LogRocket <support@logrocket.com>"],
   "@unocss/preset-uno": [
     "66.6.8",
@@ -20691,7 +20691,7 @@
     "Appium Contributors"
   ],
   "@stdlib/complex-reim": ["0.2.1", false, "The Stdlib Authors"],
-  "@turf/boolean-concave": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-concave": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "glslify-bundle": ["5.1.1", false, "Hugh Kennedy <hughskennedy@gmail.com>"],
   "react-dnd-touch-backend": [
     "16.0.1",
@@ -20777,7 +20777,7 @@
     "trustedPublisher",
     "Vladimir Krivosheev"
   ],
-  "@turf/boolean-touches": ["7.3.4", "trustedPublisher", "Turf Authors"],
+  "@turf/boolean-touches": ["7.3.5", "trustedPublisher", "Turf Authors"],
   "@aws-sdk/util-stream-browser": [
     "3.374.0",
     false,
@@ -20856,7 +20856,7 @@
   "@types/passport-oauth2": ["1.8.0", false, null],
   "rtcpeerconnection-shim": ["1.2.15", false, null],
   "@livekit/protocol": ["1.45.3", "trustedPublisher", "LiveKit"],
-  "fabric": ["7.2.0", false, "Juriy Zaytsev <kangax@gmail.com>"],
+  "fabric": ["7.3.1", "trustedPublisher", "Juriy Zaytsev <kangax@gmail.com>"],
   "@material/tooltip": ["14.0.0", false, null],
   "@types/json-stringify-safe": ["5.0.3", false, null],
   "@langchain/google-genai": ["2.1.27", "trustedPublisher", "LangChain"],
@@ -21287,7 +21287,7 @@
   "extend-object": ["1.0.0", false, "Henrik Joreteg <henrik@andyet.net>"],
   "@percy/webdriver-utils": ["1.31.11", false, null],
   "commoner": ["0.10.8", false, "Ben Newman <ben@benjamn.com>"],
-  "@applitools/snippets": ["2.8.1", false, null],
+  "@applitools/snippets": ["2.8.2", false, null],
   "react-share": [
     "5.3.0",
     "trustedPublisher",
@@ -21460,7 +21460,7 @@
   "@lmdb/lmdb-linux-arm": ["3.5.4", false, "Kris Zyp"],
   "@stdlib/assert-is-regexp-string": ["0.2.3", false, "The Stdlib Authors"],
   "@applitools/image": [
-    "1.2.9",
+    "1.2.10",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -21569,7 +21569,7 @@
   "estree-is-function": ["1.0.0", false, "Renée Kooi <renee@kooi.me>"],
   "simple-is": ["0.2.0", false, "Olov Lassus <olov.lassus@gmail.com>"],
   "jsdoctypeparser": ["9.0.0", false, "Kuniwak <orga.chem.job@gmail.com>"],
-  "@iconify-json/simple-icons": ["1.2.78", false, null],
+  "@iconify-json/simple-icons": ["1.2.79", false, null],
   "@aws-sdk/client-ecs": ["3.1032.0", false, "AWS SDK for JavaScript Team"],
   "@unocss/preset-tagify": [
     "66.6.8",
@@ -21713,12 +21713,12 @@
   "vis": ["4.21.0-EOL", false, null],
   "osx-release": ["2.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "@applitools/socket": [
-    "1.3.11",
+    "1.3.12",
     false,
     "Applitools Team <team@applitools.com>"
   ],
   "@applitools/dom-snapshot": [
-    "4.16.3",
+    "4.16.4",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -21734,7 +21734,7 @@
     "Sindre Sorhus <sindresorhus@gmail.com>"
   ],
   "@graphql-codegen/typescript-graphql-request": [
-    "7.0.0",
+    "7.0.1",
     "trustedPublisher",
     null
   ],
@@ -21771,7 +21771,7 @@
     "kazuya kawaguchi <kawakazu80@gmail.com>"
   ],
   "@turf/point-to-polygon-distance": [
-    "7.3.4",
+    "7.3.5",
     "trustedPublisher",
     "Turf Authors"
   ],
@@ -21842,7 +21842,7 @@
   "merge-trees": ["2.0.0", false, "Jo Liss <joliss42@gmail.com>"],
   "@zxcvbn-ts/core": ["3.0.4", false, "zxcvbn-ts"],
   "single-spa": ["6.0.3", false, "Joel Denning"],
-  "@mdxeditor/editor": ["3.54.1", "trustedPublisher", "Petyo Ivanov"],
+  "@mdxeditor/editor": ["3.55.0", "trustedPublisher", "Petyo Ivanov"],
   "find-workspaces": ["0.3.1", false, null],
   "@chakra-ui/progress": [
     "2.2.0",
@@ -21896,7 +21896,7 @@
   ],
   "aws-xray-sdk": ["3.12.0", false, "Amazon Web Services"],
   "@applitools/core": [
-    "4.59.2",
+    "4.59.3",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -21969,7 +21969,7 @@
   "@cloudflare/vitest-pool-workers": ["0.14.7", "trustedPublisher", null],
   "io-ts-types": ["0.5.19", false, "Giulio Canti <giulio.canti@gmail.com>"],
   "react-display-name": ["0.2.5", false, "jurassix"],
-  "@middy/util": ["7.2.3", "trustedPublisher", "Middy contributors"],
+  "@middy/util": ["7.3.0", "trustedPublisher", "Middy contributors"],
   "aws-xray-sdk-postgres": ["3.12.0", false, "Amazon Web Services"],
   "sudo-block": ["5.0.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "xhr-request": ["1.1.0", false, "Matt DesLauriers <dave.des@gmail.com>"],
@@ -22107,7 +22107,7 @@
   "yurnalist": ["2.1.0", false, "Thijs Koerselman"],
   "@safe-global/safe-apps-sdk": ["9.1.0", false, "Safe"],
   "@secretlint/secretlint-rule-no-dotenv": [
-    "11.7.1",
+    "12.0.1",
     "trustedPublisher",
     "Munieru"
   ],
@@ -22116,7 +22116,7 @@
   "@braintree/extended-promise": ["1.0.3", false, "Braintree"],
   "error-callsites": ["2.0.4", false, "Thomas Watson Steen <w@tson.dk>"],
   "@applitools/eyes": [
-    "1.38.14",
+    "1.38.15",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -22126,7 +22126,7 @@
   "stream-meter": ["1.0.4", false, "Bryce B. Baril"],
   "arrgv": ["1.0.2", false, "astur <astur@yandex.ru>"],
   "@secretlint/secretlint-formatter-sarif": [
-    "11.7.1",
+    "12.0.1",
     "trustedPublisher",
     "azu"
   ],
@@ -22168,7 +22168,7 @@
   "jest-fixed-jsdom": ["0.0.11", false, ""],
   "polybooljs": ["1.2.2", false, "Sean"],
   "@verdaccio/streams": [
-    "10.2.1",
+    "10.2.2",
     false,
     "Juan Picado <juanpicado19@gmail.com>"
   ],
@@ -22276,17 +22276,17 @@
     "Segun Adebayo <sage@adebayosegun.com>"
   ],
   "verdaccio": [
-    "6.5.1",
+    "6.5.2",
     false,
     "Verdaccio Maintainers <verdaccio.npm@gmail.com>"
   ],
   "@applitools/dom-capture": [
-    "11.7.0",
+    "11.7.1",
     false,
     "Applitools Team <team@applitools.com>"
   ],
   "@applitools/dom-shared": [
-    "1.1.2",
+    "1.1.3",
     false,
     "Applitools Team <team@applitools.com>"
   ],
@@ -22719,7 +22719,7 @@
   "@lexical/headless": ["0.43.0", false, null],
   "@clerk/shared": ["4.8.2", "trustedPublisher", "Clerk"],
   "@tanstack/query-sync-storage-persister": [
-    "5.99.1",
+    "5.99.2",
     "trustedPublisher",
     "tannerlinsley"
   ],
@@ -23177,7 +23177,7 @@
     "trustedPublisher",
     "Tomáš Ehrlich <tomas.ehrlich@gmail.com>"
   ],
-  "@salesforce/apex-node": ["8.4.21", false, "Salesforce"],
+  "@salesforce/apex-node": ["8.4.22", false, "Salesforce"],
   "@google-cloud/resource-manager": ["6.2.1", false, "Google LLC"],
   "is-svg-path": ["1.0.2", false, "Dima Yv <dfcreative@gmail.com>"],
   "@tsconfig/strictest": ["2.0.8", true, null],
@@ -23188,7 +23188,7 @@
   ],
   "regl-error2d": ["2.0.12", false, "Dima Yv <df.creative@gmail.com>"],
   "sha": ["3.0.0", false, null],
-  "@tanstack/vue-query": ["5.99.1", "trustedPublisher", "Damian Osipiuk"],
+  "@tanstack/vue-query": ["5.99.2", "trustedPublisher", "Damian Osipiuk"],
   "serverless-prune-plugin": [
     "2.1.0",
     false,
@@ -23705,7 +23705,7 @@
   ],
   "stringmap": ["0.2.2", false, "Olov Lassus <olov.lassus@gmail.com>"],
   "img-loader": ["4.0.0", false, "Andy VanWagoner <andy@vanwago.net>"],
-  "@salesforce/plugin-info": ["3.4.122", false, "Salesforce"],
+  "@salesforce/plugin-info": ["3.4.123", false, "Salesforce"],
   "clean-deep": ["3.4.0", false, "Nuno Sousa <nunofgs@gmail.com>"],
   "rollup-plugin-node-externals": [
     "9.0.1",
@@ -24601,7 +24601,7 @@
     "Juan Picado <juanpicado19@gmail.com>"
   ],
   "@cosmjs/json-rpc": ["0.38.1", false, null],
-  "@salesforce/plugin-data": ["4.0.91", false, "Salesforce"],
+  "@salesforce/plugin-data": ["4.0.92", false, "Salesforce"],
   "koa-morgan": ["1.0.1", false, "Fangdun Cai <cfddream@gmail.com>"],
   "@aws-sdk/client-appsync": ["3.1032.0", false, "AWS SDK for JavaScript Team"],
   "@currents/commit-info": [
@@ -24926,7 +24926,7 @@
   ],
   "jsox": ["1.2.125", false, "d3x0r <d3x0r@github.com>"],
   "@types/jszip": ["3.4.1", false, ""],
-  "@activepieces/shared": ["0.60.0", false, null],
+  "@activepieces/shared": ["0.61.0", false, null],
   "jss-plugin-expand": ["10.10.0", false, "JSS Team"],
   "vega-time": ["3.1.0", false, "Vega"],
   "@livekit/mutex": ["1.1.1", false, null],
@@ -25065,7 +25065,7 @@
   ],
   "vega-view": ["6.1.0", false, "Vega"],
   "html5-qrcode": ["2.3.8", false, "minhazav@gmail.com"],
-  "@salesforce/plugin-schema": ["3.3.104", false, "Salesforce"],
+  "@salesforce/plugin-schema": ["3.3.105", false, "Salesforce"],
   "@salesforce/plugin-trust": ["3.7.124", false, "Salesforce"],
   "@sap-ux/project-input-validator": ["0.6.76", false, null],
   "vite-plugin-top-level-await": [
@@ -25092,7 +25092,7 @@
   "openapi-merge": ["1.3.3", false, "Robert Massaioli <packages@rmdir.app>"],
   "postcss-markdown": ["1.3.1", "trustedPublisher", "gucong"],
   "@types/markdown-escape": ["1.1.3", false, null],
-  "sqs-producer": ["8.0.7", "trustedPublisher", null],
+  "sqs-producer": ["8.0.9", "trustedPublisher", null],
   "@ledgerhq/hw-transport-webhid": ["6.35.0", false, null],
   "@sanity/migrate": ["6.1.1", true, "Sanity.io <hello@sanity.io>"],
   "airtable": ["0.12.2", false, null],
@@ -25488,7 +25488,7 @@
   "viewport-mercator-project": ["7.0.4", false, "Uber Technologies, Inc."],
   "@types/vinyl-fs": ["3.0.7", false, null],
   "@andrewbranch/untar.js": ["1.0.3", false, null],
-  "@salesforce/plugin-templates": ["56.15.5", false, "Salesforce"],
+  "@salesforce/plugin-templates": ["56.15.7", false, "Salesforce"],
   "escape-regexp-component": ["1.0.2", false, null],
   "get-random-values": [
     "4.1.2",
@@ -25705,8 +25705,8 @@
     false,
     "John-David Dalton <john.david.dalton@gmail.com>"
   ],
-  "libsodium-sumo": ["0.8.3", false, "Ahmad Ben Mrad"],
-  "@iconify/collections": ["1.0.673", false, null],
+  "libsodium-sumo": ["0.8.4", false, "Ahmad Ben Mrad"],
+  "@iconify/collections": ["1.0.674", false, null],
   "msal": ["1.4.18", false, "Microsoft <nugetaad@microsoft.com>"],
   "@sindresorhus/df": [
     "5.0.0",
@@ -25749,7 +25749,7 @@
   "ngx-build-plus": ["20.0.0", false, null],
   "timeago.js": ["4.0.2", false, "hustcc"],
   "eslint-plugin-sort-destructure-keys": ["3.0.0", false, "Michael Hadley"],
-  "@salesforce/plugin-sobject": ["1.4.97", false, "Salesforce"],
+  "@salesforce/plugin-sobject": ["1.4.98", false, "Salesforce"],
   "remix-utils": [
     "9.3.1",
     "trustedPublisher",
@@ -26421,7 +26421,7 @@
     "Kent C. Dodds <kent@doddsfamily.us>"
   ],
   "chai-spies": ["1.1.0", true, "Jake Luer <jake@alogicalparadox.com>"],
-  "eslint-config-oclif": ["6.0.157", false, "Salesforce"],
+  "eslint-config-oclif": ["6.0.159", false, "Salesforce"],
   "rollup-plugin-svelte": ["7.2.3", false, "Rich Harris"],
   "selenium-server": ["3.141.59", false, "Didit Tech <developers@didit.com>"],
   "rollup-plugin-cleanup": [
@@ -26485,7 +26485,7 @@
   "gulp-imagemin": ["9.2.0", false, "Sindre Sorhus <sindresorhus@gmail.com>"],
   "gulp-tslint": ["8.1.4", false, "Panu Horsmalahti <panu.horsmalahti@iki.fi>"],
   "ember-maybe-import-regenerator": ["1.0.0", false, ""],
-  "@umijs/test": ["4.6.45", false, null],
+  "@umijs/test": ["4.6.46", false, null],
   "babel-plugin-react-transform": [
     "3.0.0",
     false,
@@ -26886,7 +26886,7 @@
     "Sindre Sorhus <sindresorhus@gmail.com>"
   ],
   "@kadira/storybook": ["2.35.3", false, null],
-  "umi": ["4.6.45", false, null],
+  "umi": ["4.6.46", false, null],
   "@react-native-community/bob": [
     "0.17.1",
     false,
@@ -27580,7 +27580,7 @@
     "Piotr Oleś <piotrek.oles@gmail.com>"
   ],
   "again-car-web3-enjoy": null,
-  "@umijs/lint": ["4.6.45", false, null],
+  "@umijs/lint": ["4.6.46", false, null],
   "bcrypt-nodejs": ["0.0.3", false, "Shane Girish <shaneGirish@gmail.com>"],
   "agree-go-spite": null,
   "after-met-ready": ["70.6.69", false, ""],
@@ -28148,7 +28148,7 @@
   ],
   "angular-ui-router": ["1.1.2", false, null],
   "grunt-text-replace": ["0.4.0", false, "Jonathan Holmes"],
-  "@iconify/json": ["2.2.462", false, null],
+  "@iconify/json": ["2.2.464", false, null],
   "@walletconnect/web3-provider": [
     "1.8.0",
     false,
