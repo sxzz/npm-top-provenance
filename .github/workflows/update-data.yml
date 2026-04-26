@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Setup JS
-        uses: sxzz/workflows/setup-js@v1
+        uses: sxzz/workflows/setup-js@main
         with:
           persist-credentials: true
 
@@ -21,7 +21,7 @@ jobs:
         run: pnpm run refresh
 
       - name: Commit
-        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
+        uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10.0.0
         with:
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           message: 'chore: update data [ci skip]'
