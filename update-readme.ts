@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { count, provenance, trusted, untrusted } from './analyze.ts'
+import { count, provenance, staged, trusted, untrusted } from './analyze.ts'
 
 const content = `## Results
 
@@ -18,6 +18,18 @@ Full results in [results.json](./results.json)
 |  Package   | Downloads |
 | ---------- | --------: |
 ${trusted.slice(0, 500).map(generatePackageItem).join('\n')}
+
+</details>
+
+### Staged
+
+<details>
+
+<summary>Click to show first 500 of ${staged.length} in total</summary>
+
+|  Package   | Downloads |
+| ---------- | --------: |
+${staged.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 

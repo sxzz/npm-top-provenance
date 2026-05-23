@@ -6,7 +6,12 @@ import pLimit from 'p-limit'
 
 type Provenance = boolean | 'trustedPublisher'
 type Result =
-  | [version: string, provenance: Provenance, author: string | null]
+  | [
+      version: string,
+      provenance: Provenance,
+      author: string | null,
+      staged: boolean,
+    ]
   | null
 export interface Results {
   [name: string]: Result
@@ -45,7 +50,7 @@ const results = Object.fromEntries(
 )
 fs.writeFileSync('results.json', `${JSON.stringify(results)}\n`)
 
-updateDailyStats(results)
+updateDailyStats(fullResults)
 
 interface DailyStat {
   date: string
@@ -53,19 +58,23 @@ interface DailyStat {
   trusted: number
   provenance: number
   untrusted: number
+  staged: number
   total: number
   trustedPercent: number
   provenancePercent: number
   untrustedPercent: number
+  stagedPercent: number
 }
 
-function updateDailyStats(results: Record<string, Provenance | null>): void {
-  const listSize = Object.keys(results).length
+function updateDailyStats(fullResults: Results): void {
+  const listSize = Object.keys(fullResults).length
   let trusted = 0
   let provenance = 0
   let untrusted = 0
-  for (const value of Object.values(results)) {
-    switch (value) {
+  let staged = 0
+  for (const result of Object.values(fullResults)) {
+    if (!result) continue
+    switch (result[1]) {
       case 'trustedPublisher':
         trusted++
         break
@@ -76,6 +85,7 @@ function updateDailyStats(results: Record<string, Provenance | null>): void {
         untrusted++
         break
     }
+    if (result[3]) staged++
   }
   const total = trusted + provenance + untrusted
   const pct = (n: number): number => Math.round((n / total) * 10000) / 100
@@ -87,10 +97,12 @@ function updateDailyStats(results: Record<string, Provenance | null>): void {
     trusted,
     provenance,
     untrusted,
+    staged,
     total,
     trustedPercent: pct(trusted),
     provenancePercent: pct(provenance),
     untrustedPercent: pct(untrusted),
+    stagedPercent: pct(staged),
   }
 
   const path = 'daily-stats.json'
@@ -137,5 +149,6 @@ async function getMetadata(name: string): Promise<Result> {
   const provenance: Provenance = response._npmUser?.trustedPublisher
     ? 'trustedPublisher'
     : !!response.dist?.attestations?.provenance
-  return [version, provenance, author]
+  const staged = Object.keys(response)[0] === '_id'
+  return [version, provenance, author, staged]
 }

@@ -9,10 +9,12 @@ interface DailyStat {
   trusted: number
   provenance: number
   untrusted: number
+  staged?: number
   total: number
   trustedPercent: number
   provenancePercent: number
   untrustedPercent: number
+  stagedPercent?: number
 }
 
 const data = stats as DailyStat[]
@@ -58,8 +60,8 @@ const chart = new Chart(canvas as any, {
       {
         label: 'Trusted',
         data: data.map((d) => d.trustedPercent),
-        borderColor: '#4caf50',
-        backgroundColor: '#4caf50',
+        borderColor: '#59a14f',
+        backgroundColor: '#59a14f',
         tension: 0.2,
         pointRadius,
         pointStyle,
@@ -70,8 +72,8 @@ const chart = new Chart(canvas as any, {
       {
         label: 'Provenance',
         data: data.map((d) => d.provenancePercent),
-        borderColor: '#ff9800',
-        backgroundColor: '#ff9800',
+        borderColor: '#f28e2c',
+        backgroundColor: '#f28e2c',
         tension: 0.2,
         pointRadius,
         pointStyle,
@@ -82,14 +84,27 @@ const chart = new Chart(canvas as any, {
       {
         label: 'Untrusted',
         data: data.map((d) => d.untrustedPercent),
-        borderColor: '#f44336',
-        backgroundColor: '#f44336',
+        borderColor: '#e15759',
+        backgroundColor: '#e15759',
         tension: 0.2,
         pointRadius,
         pointStyle,
         pointBackgroundColor: '#000',
         pointBorderColor: '#000',
         borderWidth: 2,
+      },
+      {
+        label: 'Staged',
+        data: data.map((d) => d.stagedPercent ?? null),
+        borderColor: '#4e79a7',
+        backgroundColor: '#4e79a7',
+        tension: 0.2,
+        pointRadius,
+        pointStyle,
+        pointBackgroundColor: '#000',
+        pointBorderColor: '#000',
+        borderWidth: 2,
+        spanGaps: true,
       },
     ],
   },
