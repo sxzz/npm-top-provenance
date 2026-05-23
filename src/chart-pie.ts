@@ -93,7 +93,6 @@ const chart = new Chart(canvas as any, {
         position: 'bottom',
         labels: {
           padding: 24,
-          color: COLORS.marker,
           font: { size: 20, family: 'Inter' },
           generateLabels() {
             return [
@@ -101,6 +100,7 @@ const chart = new Chart(canvas as any, {
                 text,
                 fillStyle: provenanceFills[i] as any,
                 strokeStyle: provenanceBase[i],
+                fontColor: COLORS.marker,
                 lineWidth: 0,
                 index: i,
                 datasetIndex: 1,
@@ -109,6 +109,7 @@ const chart = new Chart(canvas as any, {
                 text,
                 fillStyle: stagedColors[i],
                 strokeStyle: stagedColors[i],
+                fontColor: COLORS.marker,
                 lineWidth: 0,
                 index: i,
                 datasetIndex: 0,
