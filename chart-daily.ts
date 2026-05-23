@@ -35,7 +35,7 @@ const verticalLinePlugin = {
   afterDatasetsDraw(chart: any) {
     const { ctx, chartArea, scales } = chart
     ctx.save()
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.35)'
+    ctx.strokeStyle = 'rgba(128, 128, 128, 0.5)'
     ctx.setLineDash([4, 4])
     ctx.lineWidth = 1
     for (const i of updateIndices) {
@@ -65,8 +65,8 @@ const chart = new Chart(canvas as any, {
         tension: 0.2,
         pointRadius,
         pointStyle,
-        pointBackgroundColor: '#000',
-        pointBorderColor: '#000',
+        pointBackgroundColor: '#888',
+        pointBorderColor: '#888',
         borderWidth: 2,
       },
       {
@@ -77,8 +77,8 @@ const chart = new Chart(canvas as any, {
         tension: 0.2,
         pointRadius,
         pointStyle,
-        pointBackgroundColor: '#000',
-        pointBorderColor: '#000',
+        pointBackgroundColor: '#888',
+        pointBorderColor: '#888',
         borderWidth: 2,
       },
       {
@@ -89,8 +89,8 @@ const chart = new Chart(canvas as any, {
         tension: 0.2,
         pointRadius,
         pointStyle,
-        pointBackgroundColor: '#000',
-        pointBorderColor: '#000',
+        pointBackgroundColor: '#888',
+        pointBorderColor: '#888',
         borderWidth: 2,
       },
       {
@@ -101,8 +101,8 @@ const chart = new Chart(canvas as any, {
         tension: 0.2,
         pointRadius,
         pointStyle,
-        pointBackgroundColor: '#000',
-        pointBorderColor: '#000',
+        pointBackgroundColor: '#888',
+        pointBorderColor: '#888',
         borderWidth: 2,
         spanGaps: true,
       },
