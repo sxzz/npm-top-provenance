@@ -24,8 +24,7 @@ for (let i = 1; i < data.length; i++) {
   }
 }
 
-const pointRadius = (ctx: any) =>
-  updateIndices.has(ctx.dataIndex) ? 6 : 0
+const pointRadius = (ctx: any) => (updateIndices.has(ctx.dataIndex) ? 6 : 0)
 const pointStyle = (ctx: any) =>
   updateIndices.has(ctx.dataIndex) ? 'triangle' : 'circle'
 
