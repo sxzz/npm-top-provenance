@@ -115,13 +115,13 @@ const chart = new Chart(canvas as any, {
         position: 'bottom',
         labels: {
           padding: 16,
-          font: { size: 16 },
+          font: { size: 16, family: 'Arial' },
         },
       },
       title: {
         display: true,
         text: 'npm Top Packages — Provenance Status Over Time (%)',
-        font: { size: 18 },
+        font: { size: 18, family: 'Arial' },
         padding: { top: 8, bottom: 12 },
       },
     },

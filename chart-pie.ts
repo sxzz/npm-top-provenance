@@ -81,7 +81,7 @@ const chart = new Chart(canvas as any, {
         position: 'bottom',
         labels: {
           padding: 24,
-          font: { size: 20 },
+          font: { size: 20, family: 'Arial' },
           generateLabels() {
             return [
               ...provenanceLabels.map((text, i) => ({
