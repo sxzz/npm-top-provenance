@@ -2,7 +2,7 @@
   "name": "npm-top-provenance",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@11.2.2",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/sxzz",
@@ -15,14 +15,14 @@
     "url": "https://github.com/sxzz/npm-top-provenance/issues"
   },
   "scripts": {
-    "refresh": "node index.ts && node update-readme.ts && node chart.ts && pnpm run format && svgo chart.svg",
+    "refresh": "node index.ts && node update-readme.ts && node chart-pie.ts && node chart-daily.ts && pnpm run format && svgo chart-pie.svg chart-daily.svg",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsgo --noEmit",
     "format": "prettier --cache --write ."
   },
   "dependencies": {
-    "@napi-rs/canvas": "^0.1.99",
+    "@napi-rs/canvas": "^1.0.0",
     "chart.js": "^4.5.1",
     "ky": "^2.0.2",
     "nanospinner": "^1.2.2",
@@ -31,11 +31,11 @@
     "svgo": "^4.0.1"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^7.8.4",
+    "@sxzz/eslint-config": "^8.1.0",
     "@sxzz/prettier-config": "^2.3.1",
-    "@types/node": "^25.6.0",
-    "@typescript/native-preview": "7.0.0-dev.20260425.1",
-    "eslint": "^10.2.1",
+    "@types/node": "^25.9.1",
+    "@typescript/native-preview": "7.0.0-dev.20260522.1",
+    "eslint": "^10.4.0",
     "prettier": "^3.8.3"
   },
   "prettier": "@sxzz/prettier-config"

@@ -30,6 +30,6 @@ const chart = new Chart(canvas as any, {
   },
 })
 
-await writeFile('chart.svg', canvas.getContent())
-console.log('chart.svg updated successfully')
+await writeFile('chart-pie.svg', canvas.getContent())
+console.log('chart-pie.svg updated successfully')
 chart.destroy()

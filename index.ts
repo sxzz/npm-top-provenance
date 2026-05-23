@@ -45,6 +45,65 @@ const results = Object.fromEntries(
 )
 fs.writeFileSync('results.json', `${JSON.stringify(results)}\n`)
 
+updateDailyStats(results)
+
+interface DailyStat {
+  date: string
+  listSize: number
+  trusted: number
+  provenance: number
+  untrusted: number
+  total: number
+  trustedPercent: number
+  provenancePercent: number
+  untrustedPercent: number
+}
+
+function updateDailyStats(results: Record<string, Provenance | null>): void {
+  const listSize = Object.keys(results).length
+  let trusted = 0
+  let provenance = 0
+  let untrusted = 0
+  for (const value of Object.values(results)) {
+    switch (value) {
+      case 'trustedPublisher':
+        trusted++
+        break
+      case true:
+        provenance++
+        break
+      case false:
+        untrusted++
+        break
+    }
+  }
+  const total = trusted + provenance + untrusted
+  const pct = (n: number): number => Math.round((n / total) * 10000) / 100
+
+  const date = new Date().toISOString().slice(0, 10)
+  const entry: DailyStat = {
+    date,
+    listSize,
+    trusted,
+    provenance,
+    untrusted,
+    total,
+    trustedPercent: pct(trusted),
+    provenancePercent: pct(provenance),
+    untrustedPercent: pct(untrusted),
+  }
+
+  const path = 'daily-stats.json'
+  const existing: DailyStat[] = fs.existsSync(path)
+    ? JSON.parse(fs.readFileSync(path, 'utf8'))
+    : []
+  const next = existing.filter((s) => s.date !== date)
+  next.push(entry)
+  next.sort((a, b) => a.date.localeCompare(b.date))
+  fs.writeFileSync(path, `${JSON.stringify(next, null, 2)}\n`)
+  console.log(`daily-stats.json updated for ${date}`)
+}
+
 async function getMetadata(name: string): Promise<Result> {
   const response = await ky<any>(
     // `https://registry.npmjs.org/${name}/latest`
