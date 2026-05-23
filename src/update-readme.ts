@@ -1,5 +1,10 @@
 import fs from 'node:fs'
-import { count, provenance, staged, trusted, untrusted } from './analyze.ts'
+import results from '../full-results.json' with { type: 'json' }
+import { classifyResults, type Results } from './shared.ts'
+
+const { count, provenance, staged, trusted, untrusted } = classifyResults(
+  results as unknown as Results,
+)
 
 const content = `## Results
 

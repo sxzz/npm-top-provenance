@@ -1,7 +1,9 @@
-import { writeFile } from 'node:fs/promises'
 import { createCanvas, SvgExportFlag } from '@napi-rs/canvas'
 import Chart from 'chart.js/auto'
-import stats from './daily-stats.json' with { type: 'json' }
+import stats from '../daily-stats.json' with { type: 'json' }
+import { COLORS, registerInterFont, writeChartSvg } from './shared.ts'
+
+registerInterFont()
 
 interface DailyStat {
   date: string
@@ -49,64 +51,57 @@ const verticalLinePlugin = {
   },
 }
 
-const canvas = createCanvas(1000, 500, SvgExportFlag.NoPrettyXML)
+interface SeriesSpec {
+  label: string
+  color: string
+  values: (number | null)[]
+  spanGaps?: boolean
+}
+
+const series: SeriesSpec[] = [
+  {
+    label: 'Trusted',
+    color: COLORS.trusted,
+    values: data.map((d) => d.trustedPercent),
+  },
+  {
+    label: 'Provenance',
+    color: COLORS.provenance,
+    values: data.map((d) => d.provenancePercent),
+  },
+  {
+    label: 'Untrusted',
+    color: COLORS.untrusted,
+    values: data.map((d) => d.untrustedPercent),
+  },
+  {
+    label: 'Staged',
+    color: COLORS.staged,
+    values: data.map((d) => d.stagedPercent ?? null),
+    spanGaps: true,
+  },
+]
+
+const canvas = createCanvas(1000, 500, SvgExportFlag.ConvertTextToPaths)
 
 const chart = new Chart(canvas as any, {
   type: 'line',
   plugins: [verticalLinePlugin],
   data: {
     labels: data.map((d) => d.date),
-    datasets: [
-      {
-        label: 'Trusted',
-        data: data.map((d) => d.trustedPercent),
-        borderColor: '#59a14f',
-        backgroundColor: '#59a14f',
-        tension: 0.2,
-        pointRadius,
-        pointStyle,
-        pointBackgroundColor: '#888',
-        pointBorderColor: '#888',
-        borderWidth: 2,
-      },
-      {
-        label: 'Provenance',
-        data: data.map((d) => d.provenancePercent),
-        borderColor: '#f28e2c',
-        backgroundColor: '#f28e2c',
-        tension: 0.2,
-        pointRadius,
-        pointStyle,
-        pointBackgroundColor: '#888',
-        pointBorderColor: '#888',
-        borderWidth: 2,
-      },
-      {
-        label: 'Untrusted',
-        data: data.map((d) => d.untrustedPercent),
-        borderColor: '#e15759',
-        backgroundColor: '#e15759',
-        tension: 0.2,
-        pointRadius,
-        pointStyle,
-        pointBackgroundColor: '#888',
-        pointBorderColor: '#888',
-        borderWidth: 2,
-      },
-      {
-        label: 'Staged',
-        data: data.map((d) => d.stagedPercent ?? null),
-        borderColor: '#4e79a7',
-        backgroundColor: '#4e79a7',
-        tension: 0.2,
-        pointRadius,
-        pointStyle,
-        pointBackgroundColor: '#888',
-        pointBorderColor: '#888',
-        borderWidth: 2,
-        spanGaps: true,
-      },
-    ],
+    datasets: series.map(({ label, color, values, spanGaps }) => ({
+      label,
+      data: values,
+      borderColor: color,
+      backgroundColor: color,
+      tension: 0.2,
+      pointRadius,
+      pointStyle,
+      pointBackgroundColor: COLORS.marker,
+      pointBorderColor: COLORS.marker,
+      borderWidth: 2,
+      spanGaps,
+    })),
   },
   options: {
     responsive: false,
@@ -115,20 +110,20 @@ const chart = new Chart(canvas as any, {
         position: 'bottom',
         labels: {
           padding: 16,
-          font: { size: 16, family: 'Arial' },
+          font: { size: 16, family: 'Inter' },
         },
       },
       title: {
         display: true,
         text: 'npm Top Packages — Provenance Status Over Time (%)',
-        font: { size: 18, family: 'Arial' },
+        font: { size: 18, family: 'Inter' },
         padding: { top: 8, bottom: 12 },
       },
     },
     scales: {
       x: {
         ticks: {
-          font: { size: 12 },
+          font: { size: 12, family: 'Inter' },
           maxRotation: 45,
           minRotation: 45,
           autoSkip: true,
@@ -139,7 +134,7 @@ const chart = new Chart(canvas as any, {
         beginAtZero: true,
         max: 100,
         ticks: {
-          font: { size: 13 },
+          font: { size: 13, family: 'Inter' },
           callback: (v) => `${v}%`,
         },
       },
@@ -147,6 +142,5 @@ const chart = new Chart(canvas as any, {
   },
 })
 
-await writeFile('chart-daily.svg', canvas.getContent())
-console.log('chart-daily.svg updated successfully')
+await writeChartSvg(canvas, 'chart-daily.svg')
 chart.destroy()

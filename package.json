@@ -15,7 +15,7 @@
     "url": "https://github.com/sxzz/npm-top-provenance/issues"
   },
   "scripts": {
-    "refresh": "node index.ts && node update-readme.ts && node chart-pie.ts && node chart-daily.ts && pnpm run format && svgo chart-pie.svg chart-daily.svg",
+    "refresh": "node src/index.ts && node src/update-readme.ts && node src/chart-pie.ts && node src/chart-daily.ts && pnpm run format && svgo chart-pie.svg chart-daily.svg",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsgo --noEmit",

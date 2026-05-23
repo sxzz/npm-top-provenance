@@ -1,9 +1,21 @@
-import { writeFile } from 'node:fs/promises'
 import { createCanvas, SvgExportFlag } from '@napi-rs/canvas'
 import Chart from 'chart.js/auto'
-import { count, provenance, staged, trusted, untrusted } from './analyze.ts'
+import results from '../full-results.json' with { type: 'json' }
+import {
+  classifyResults,
+  COLORS,
+  registerInterFont,
+  writeChartSvg,
+  type Results,
+} from './shared.ts'
 
-const canvas = createCanvas(800, 800, SvgExportFlag.NoPrettyXML)
+const { count, provenance, staged, trusted, untrusted } = classifyResults(
+  results as unknown as Results,
+)
+
+registerInterFont()
+
+const canvas = createCanvas(800, 800, SvgExportFlag.ConvertTextToPaths)
 
 const nonStaged = count - staged.length
 
@@ -42,16 +54,16 @@ function makePattern(base: string, line: string, kind: PatternKind) {
 
 // Provenance state (inner pie) — Tableau-style desaturated palette
 const provenanceLabels = ['Trusted', 'Provenance', 'Untrusted']
-const provenanceBase = ['#59a14f', '#f28e2c', '#e15759']
+const provenanceBase = [COLORS.trusted, COLORS.provenance, COLORS.untrusted]
 const provenanceFills = [
-  makePattern('#59a14f', '#2f5e2a', 'dots'),
-  makePattern('#f28e2c', '#a05c14', 'forward'),
-  makePattern('#e15759', '#8a3133', 'backward'),
+  makePattern(COLORS.trusted, '#2f5e2a', 'dots'),
+  makePattern(COLORS.provenance, '#a05c14', 'forward'),
+  makePattern(COLORS.untrusted, '#8a3133', 'backward'),
 ]
 
 // Staged publishing (outer ring)
 const stagedLabels = ['Staged', 'Non-staged']
-const stagedColors = ['#4e79a7', '#cecece']
+const stagedColors = [COLORS.staged, COLORS.nonStaged]
 
 const chart = new Chart(canvas as any, {
   type: 'doughnut',
@@ -81,7 +93,8 @@ const chart = new Chart(canvas as any, {
         position: 'bottom',
         labels: {
           padding: 24,
-          font: { size: 20, family: 'Arial' },
+          color: COLORS.marker,
+          font: { size: 20, family: 'Inter' },
           generateLabels() {
             return [
               ...provenanceLabels.map((text, i) => ({
@@ -108,6 +121,5 @@ const chart = new Chart(canvas as any, {
   },
 })
 
-await writeFile('chart-pie.svg', canvas.getContent())
-console.log('chart-pie.svg updated successfully')
+await writeChartSvg(canvas, 'chart-pie.svg')
 chart.destroy()

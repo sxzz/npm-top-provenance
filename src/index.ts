@@ -3,19 +3,12 @@ import ky, { HTTPError } from 'ky'
 import { createSpinner } from 'nanospinner'
 import { npmHighImpact } from 'npm-high-impact'
 import pLimit from 'p-limit'
-
-type Provenance = boolean | 'trustedPublisher'
-type Result =
-  | [
-      version: string,
-      provenance: Provenance,
-      author: string | null,
-      staged: boolean,
-    ]
-  | null
-export interface Results {
-  [name: string]: Result
-}
+import {
+  classifyResults,
+  type Provenance,
+  type Result,
+  type Results,
+} from './shared.ts'
 
 const limit = pLimit(16)
 
@@ -67,33 +60,18 @@ interface DailyStat {
 }
 
 function updateDailyStats(fullResults: Results): void {
-  const listSize = Object.keys(fullResults).length
-  let trusted = 0
-  let provenance = 0
-  let untrusted = 0
-  let staged = 0
-  for (const result of Object.values(fullResults)) {
-    if (!result) continue
-    switch (result[1]) {
-      case 'trustedPublisher':
-        trusted++
-        break
-      case true:
-        provenance++
-        break
-      case false:
-        untrusted++
-        break
-    }
-    if (result[3]) staged++
-  }
-  const total = trusted + provenance + untrusted
+  const classified = classifyResults(fullResults)
+  const trusted = classified.trusted.length
+  const provenance = classified.provenance.length
+  const untrusted = classified.untrusted.length
+  const staged = classified.staged.length
+  const total = classified.count
   const pct = (n: number): number => Math.round((n / total) * 10000) / 100
 
   const date = new Date().toISOString().slice(0, 10)
   const entry: DailyStat = {
     date,
-    listSize,
+    listSize: Object.keys(fullResults).length,
     trusted,
     provenance,
     untrusted,
