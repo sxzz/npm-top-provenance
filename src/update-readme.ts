@@ -2,9 +2,8 @@ import fs from 'node:fs'
 import results from '../full-results.json' with { type: 'json' }
 import { classifyResults, type Results } from './shared.ts'
 
-const { count, provenance, staged, trusted, untrusted } = classifyResults(
-  results as unknown as Results,
-)
+const { count, provenance, staged, trusted, trustedNoProvenance, untrusted } =
+  classifyResults(results as unknown as Results)
 
 const content = `## Results
 
@@ -16,6 +15,8 @@ Full results in [results.json](./results.json)
 
 ### Trusted
 
+> Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation.
+
 <details>
 
 <summary>Click to show first 500 of ${trusted.length} in total</summary>
@@ -26,19 +27,23 @@ ${trusted.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
-### Staged
+### Trusted without provenance
+
+> Published via trusted publishing but with provenance attestation disabled.
 
 <details>
 
-<summary>Click to show first 500 of ${staged.length} in total</summary>
+<summary>Click to show first 200 of ${trustedNoProvenance.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${staged.slice(0, 500).map(generatePackageItem).join('\n')}
+${trustedNoProvenance.slice(0, 200).map(generatePackageItem).join('\n')}
 
 </details>
 
 ### Provenance
+
+> Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation only — published with a regular token (not trusted publishing).
 
 <details>
 
@@ -50,7 +55,23 @@ ${provenance.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
+### Staged
+
+> Published via [staged publishing](https://docs.npmjs.com/staged-publishing/).
+
+<details>
+
+<summary>Click to show first 500 of ${staged.length} in total</summary>
+
+|  Package   | Downloads |
+| ---------- | --------: |
+${staged.slice(0, 500).map(generatePackageItem).join('\n')}
+
+</details>
+
 ### Untrusted
+
+> Published with a regular token and without a provenance attestation.
 
 <details>
 

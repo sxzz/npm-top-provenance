@@ -9,11 +9,13 @@ interface DailyStat {
   date: string
   listSize: number
   trusted: number
+  trustedNoProvenance?: number
   provenance: number
   untrusted: number
   staged?: number
   total: number
   trustedPercent: number
+  trustedNoProvenancePercent?: number
   provenancePercent: number
   untrustedPercent: number
   stagedPercent?: number
@@ -63,6 +65,12 @@ const series: SeriesSpec[] = [
     label: 'Trusted',
     color: COLORS.trusted,
     values: data.map((d) => d.trustedPercent),
+  },
+  {
+    label: 'Trusted without provenance',
+    color: COLORS.trustedNoProvenance,
+    values: data.map((d) => d.trustedNoProvenancePercent ?? null),
+    spanGaps: true,
   },
   {
     label: 'Provenance',

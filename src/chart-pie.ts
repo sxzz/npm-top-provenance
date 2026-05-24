@@ -9,9 +9,8 @@ import {
   type Results,
 } from './shared.ts'
 
-const { count, provenance, staged, trusted, untrusted } = classifyResults(
-  results as unknown as Results,
-)
+const { count, provenance, staged, trusted, trustedNoProvenance, untrusted } =
+  classifyResults(results as unknown as Results)
 
 registerInterFont()
 
@@ -19,7 +18,7 @@ const canvas = createCanvas(800, 800, SvgExportFlag.ConvertTextToPaths)
 
 const nonStaged = count - staged.length
 
-type PatternKind = 'dots' | 'forward' | 'backward'
+type PatternKind = 'dots' | 'forward' | 'backward' | 'cross'
 
 function makePattern(base: string, line: string, kind: PatternKind) {
   const size = 18
@@ -48,15 +47,34 @@ function makePattern(base: string, line: string, kind: PatternKind) {
       ctx.lineTo(size + 1, size + 1)
       ctx.stroke()
       break
+    case 'cross':
+      ctx.beginPath()
+      ctx.moveTo(-1, size + 1)
+      ctx.lineTo(size + 1, -1)
+      ctx.moveTo(-1, -1)
+      ctx.lineTo(size + 1, size + 1)
+      ctx.stroke()
+      break
   }
   return ctx.createPattern(pat as any, 'repeat')!
 }
 
 // Provenance state (inner pie) — Tableau-style desaturated palette
-const provenanceLabels = ['Trusted', 'Provenance', 'Untrusted']
-const provenanceBase = [COLORS.trusted, COLORS.provenance, COLORS.untrusted]
+const provenanceLabels = [
+  'Trusted',
+  'Trusted without provenance',
+  'Provenance',
+  'Untrusted',
+]
+const provenanceBase = [
+  COLORS.trusted,
+  COLORS.trustedNoProvenance,
+  COLORS.provenance,
+  COLORS.untrusted,
+]
 const provenanceFills = [
   makePattern(COLORS.trusted, '#2f5e2a', 'dots'),
+  makePattern(COLORS.trustedNoProvenance, '#8a6f1e', 'cross'),
   makePattern(COLORS.provenance, '#a05c14', 'forward'),
   makePattern(COLORS.untrusted, '#8a3133', 'backward'),
 ]
@@ -80,7 +98,12 @@ const chart = new Chart(canvas as any, {
       // Inner solid pie: provenance state
       {
         label: 'Provenance state',
-        data: [trusted.length, provenance.length, untrusted.length],
+        data: [
+          trusted.length,
+          trustedNoProvenance.length,
+          provenance.length,
+          untrusted.length,
+        ],
         backgroundColor: provenanceFills as any,
         weight: 6,
       },

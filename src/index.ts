@@ -3,12 +3,7 @@ import ky, { HTTPError } from 'ky'
 import { createSpinner } from 'nanospinner'
 import { npmHighImpact } from 'npm-high-impact'
 import pLimit from 'p-limit'
-import {
-  classifyResults,
-  type Provenance,
-  type Result,
-  type Results,
-} from './shared.ts'
+import { classifyResults, type Result, type Results } from './shared.ts'
 
 const limit = pLimit(16)
 
@@ -37,8 +32,8 @@ fs.writeFileSync('full-results.json', `${JSON.stringify(fullResults)}\n`)
 const results = Object.fromEntries(
   Object.entries(fullResults).map(([name, result]) => {
     if (!result) return [name, null]
-    const [, provenance] = result
-    return [name, provenance]
+    const [, trustedPublisher, provenance] = result
+    return [name, [trustedPublisher, provenance]]
   }),
 )
 fs.writeFileSync('results.json', `${JSON.stringify(results)}\n`)
@@ -49,11 +44,13 @@ interface DailyStat {
   date: string
   listSize: number
   trusted: number
+  trustedNoProvenance: number
   provenance: number
   untrusted: number
   staged: number
   total: number
   trustedPercent: number
+  trustedNoProvenancePercent: number
   provenancePercent: number
   untrustedPercent: number
   stagedPercent: number
@@ -62,6 +59,7 @@ interface DailyStat {
 function updateDailyStats(fullResults: Results): void {
   const classified = classifyResults(fullResults)
   const trusted = classified.trusted.length
+  const trustedNoProvenance = classified.trustedNoProvenance.length
   const provenance = classified.provenance.length
   const untrusted = classified.untrusted.length
   const staged = classified.staged.length
@@ -73,11 +71,13 @@ function updateDailyStats(fullResults: Results): void {
     date,
     listSize: Object.keys(fullResults).length,
     trusted,
+    trustedNoProvenance,
     provenance,
     untrusted,
     staged,
     total,
     trustedPercent: pct(trusted),
+    trustedNoProvenancePercent: pct(trustedNoProvenance),
     provenancePercent: pct(provenance),
     untrustedPercent: pct(untrusted),
     stagedPercent: pct(staged),
@@ -124,9 +124,8 @@ async function getMetadata(name: string): Promise<Result> {
       : typeof response.author === 'object' && response.author
         ? `${response.author.name}${response.author.email ? ` <${response.author.email}>` : ''}`
         : null
-  const provenance: Provenance = response._npmUser?.trustedPublisher
-    ? 'trustedPublisher'
-    : !!response.dist?.attestations?.provenance
+  const trustedPublisher = !!response._npmUser?.trustedPublisher
+  const provenance = !!response.dist?.attestations?.provenance
   const staged = Object.keys(response)[0] === '_id'
-  return [version, provenance, author, staged]
+  return [version, trustedPublisher, provenance, author, staged]
 }
