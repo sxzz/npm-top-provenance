@@ -38,8 +38,8 @@ fs.writeFileSync('full-results.json', `${JSON.stringify(fullResults)}\n`)
 const results = Object.fromEntries(
   Object.entries(fullResults).map(([name, result]) => {
     if (!result) return [name, null]
-    const [, trustedPublisher, provenance] = result
-    return [name, [trustedPublisher, provenance]]
+    const [, , provenance, trustedPublisher, staged] = result
+    return [name, [provenance, trustedPublisher, staged]]
   }),
 )
 fs.writeFileSync('results.json', `${JSON.stringify(results)}\n`)
@@ -109,5 +109,5 @@ async function getMetadata(name: string): Promise<Result> {
   const trustedPublisher = !!response._npmUser?.trustedPublisher
   const provenance = !!response.dist?.attestations?.provenance
   const staged = Object.keys(response)[0] === '_id'
-  return [version, trustedPublisher, provenance, author, staged]
+  return [version, author, provenance, trustedPublisher, staged]
 }

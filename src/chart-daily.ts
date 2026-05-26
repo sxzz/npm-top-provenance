@@ -79,12 +79,12 @@ const comboSeries: SeriesSpec[] = [
 
 const independentSeries: SeriesSpec[] = [
   {
-    label: 'Trusted (total)',
+    label: 'Trusted',
     color: COLORS.trusted,
     values: pickPct('trusted'),
   },
   {
-    label: 'Provenance (total)',
+    label: 'Provenance',
     color: COLORS.provenance,
     values: pickPct('provenance'),
   },

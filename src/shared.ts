@@ -5,9 +5,9 @@ import { GlobalFonts, type SvgCanvas } from '@napi-rs/canvas'
 export type Result =
   | [
       version: string,
-      trustedPublisher: boolean,
-      provenance: boolean,
       author: string | null,
+      provenance: boolean,
+      trustedPublisher: boolean,
       staged: boolean,
     ]
   | null
@@ -73,7 +73,7 @@ export function classifyResults(results: Results): Classified {
   const trustedProvenanceStaged: string[] = []
   for (const [name, result] of Object.entries(results)) {
     if (!result) continue
-    const [, trustedPublisher, hasProvenance, , isStaged] = result
+    const [, , hasProvenance, trustedPublisher, isStaged] = result
     if (trustedPublisher && hasProvenance) {
       trustedAndProvenance.push(name)
     } else if (trustedPublisher) {
