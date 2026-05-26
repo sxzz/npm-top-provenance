@@ -9,8 +9,14 @@ import {
   type Results,
 } from './shared.ts'
 
-const { count, provenance, staged, trusted, trustedNoProvenance, untrusted } =
-  classifyResults(results as unknown as Results)
+const {
+  count,
+  provenanceOnly,
+  staged,
+  trustedAndProvenance,
+  trustedWithoutProvenance,
+  none,
+} = classifyResults(results as unknown as Results)
 
 registerInterFont()
 
@@ -61,22 +67,22 @@ function makePattern(base: string, line: string, kind: PatternKind) {
 
 // Provenance state (inner pie) — Tableau-style desaturated palette
 const provenanceLabels = [
-  'Trusted',
+  'Trusted + Provenance',
   'Trusted without provenance',
-  'Provenance',
-  'Untrusted',
+  'Provenance only',
+  'None',
 ]
 const provenanceBase = [
-  COLORS.trusted,
-  COLORS.trustedNoProvenance,
-  COLORS.provenance,
-  COLORS.untrusted,
+  COLORS.trustedAndProvenance,
+  COLORS.trustedWithoutProvenance,
+  COLORS.provenanceOnly,
+  COLORS.none,
 ]
 const provenanceFills = [
-  makePattern(COLORS.trusted, '#2f5e2a', 'dots'),
-  makePattern(COLORS.trustedNoProvenance, '#8a6f1e', 'cross'),
-  makePattern(COLORS.provenance, '#a05c14', 'forward'),
-  makePattern(COLORS.untrusted, '#8a3133', 'backward'),
+  makePattern(COLORS.trustedAndProvenance, '#2f5e2a', 'dots'),
+  makePattern(COLORS.trustedWithoutProvenance, '#8a6f1e', 'cross'),
+  makePattern(COLORS.provenanceOnly, '#a05c14', 'forward'),
+  makePattern(COLORS.none, '#8a3133', 'backward'),
 ]
 
 // Staged publishing (outer ring)
@@ -99,10 +105,10 @@ const chart = new Chart(canvas as any, {
       {
         label: 'Provenance state',
         data: [
-          trusted.length,
-          trustedNoProvenance.length,
-          provenance.length,
-          untrusted.length,
+          trustedAndProvenance.length,
+          trustedWithoutProvenance.length,
+          provenanceOnly.length,
+          none.length,
         ],
         backgroundColor: provenanceFills as any,
         weight: 6,

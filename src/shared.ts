@@ -16,55 +16,100 @@ export interface Results {
 }
 
 export const COLORS = {
-  trusted: '#59a14f',
-  trustedNoProvenance: '#edc949',
-  provenance: '#f28e2c',
-  untrusted: '#e15759',
+  // Combo buckets (mutually exclusive)
+  trustedAndProvenance: '#59a14f',
+  trustedWithoutProvenance: '#edc949',
+  provenanceOnly: '#f28e2c',
+  none: '#e15759',
+  // Independent metrics
+  trusted: '#76b7b2',
+  provenance: '#b07aa1',
   staged: '#4e79a7',
+  trustedProvenanceStaged: '#9c755f',
+  // Misc
   nonStaged: '#cecece',
   marker: '#888',
 } as const
 
+export interface DailyStat {
+  date: string
+  listSize: number
+  total: number
+  // Combo buckets (mutually exclusive, sum to total)
+  trustedAndProvenance?: number
+  trustedAndProvenancePercent?: number
+  trustedWithoutProvenance?: number
+  trustedWithoutProvenancePercent?: number
+  provenanceOnly?: number
+  provenanceOnlyPercent?: number
+  none?: number
+  nonePercent?: number
+  // Independent metrics
+  trusted?: number
+  trustedPercent?: number
+  provenance?: number
+  provenancePercent?: number
+  staged?: number
+  stagedPercent?: number
+  trustedProvenanceStaged?: number
+  trustedProvenanceStagedPercent?: number
+}
+
 export interface Classified {
+  // Combo buckets (mutually exclusive, sum to count)
+  trustedAndProvenance: string[]
+  trustedWithoutProvenance: string[]
+  provenanceOnly: string[]
+  none: string[]
+  // Independent / overlapping metrics
   trusted: string[]
-  trustedNoProvenance: string[]
   provenance: string[]
-  untrusted: string[]
   staged: string[]
+  trustedProvenanceStaged: string[]
   count: number
 }
 
 export function classifyResults(results: Results): Classified {
+  const trustedAndProvenance: string[] = []
+  const trustedWithoutProvenance: string[] = []
+  const provenanceOnly: string[] = []
+  const none: string[] = []
   const trusted: string[] = []
-  const trustedNoProvenance: string[] = []
   const provenance: string[] = []
-  const untrusted: string[] = []
   const staged: string[] = []
+  const trustedProvenanceStaged: string[] = []
   for (const [name, result] of Object.entries(results)) {
     if (!result) continue
     const [, trustedPublisher, hasProvenance, , isStaged] = result
     if (trustedPublisher && hasProvenance) {
-      trusted.push(name)
+      trustedAndProvenance.push(name)
     } else if (trustedPublisher) {
-      trustedNoProvenance.push(name)
+      trustedWithoutProvenance.push(name)
     } else if (hasProvenance) {
-      provenance.push(name)
+      provenanceOnly.push(name)
     } else {
-      untrusted.push(name)
+      none.push(name)
     }
+    if (trustedPublisher) trusted.push(name)
+    if (hasProvenance) provenance.push(name)
     if (isStaged) staged.push(name)
+    if (trustedPublisher && hasProvenance && isStaged)
+      trustedProvenanceStaged.push(name)
   }
   return {
+    trustedAndProvenance,
+    trustedWithoutProvenance,
+    provenanceOnly,
+    none,
     trusted,
-    trustedNoProvenance,
     provenance,
-    untrusted,
     staged,
+    trustedProvenanceStaged,
     count:
-      trusted.length +
-      trustedNoProvenance.length +
-      provenance.length +
-      untrusted.length,
+      trustedAndProvenance.length +
+      trustedWithoutProvenance.length +
+      provenanceOnly.length +
+      none.length,
   }
 }
 

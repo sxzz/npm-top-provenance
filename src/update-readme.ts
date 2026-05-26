@@ -2,8 +2,14 @@ import fs from 'node:fs'
 import results from '../full-results.json' with { type: 'json' }
 import { classifyResults, type Results } from './shared.ts'
 
-const { count, provenance, staged, trusted, trustedNoProvenance, untrusted } =
-  classifyResults(results as unknown as Results)
+const {
+  count,
+  provenanceOnly,
+  staged,
+  trustedAndProvenance,
+  trustedWithoutProvenance,
+  none,
+} = classifyResults(results as unknown as Results)
 
 const content = `## Results
 
@@ -13,17 +19,17 @@ Total packages: ${count}
 
 Full results in [results.json](./results.json)
 
-### Trusted
+### Trusted + Provenance
 
 > Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation.
 
 <details>
 
-<summary>Click to show first 500 of ${trusted.length} in total</summary>
+<summary>Click to show first 500 of ${trustedAndProvenance.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${trusted.slice(0, 500).map(generatePackageItem).join('\n')}
+${trustedAndProvenance.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
@@ -33,25 +39,25 @@ ${trusted.slice(0, 500).map(generatePackageItem).join('\n')}
 
 <details>
 
-<summary>Click to show first 200 of ${trustedNoProvenance.length} in total</summary>
+<summary>Click to show first 200 of ${trustedWithoutProvenance.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${trustedNoProvenance.slice(0, 200).map(generatePackageItem).join('\n')}
+${trustedWithoutProvenance.slice(0, 200).map(generatePackageItem).join('\n')}
 
 </details>
 
-### Provenance
+### Provenance only
 
-> Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation only — published with a regular token (not trusted publishing).
+> Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation, but not published via trusted publishing.
 
 <details>
 
-<summary>Click to show first 500 of ${provenance.length} in total</summary>
+<summary>Click to show first 500 of ${provenanceOnly.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${provenance.slice(0, 500).map(generatePackageItem).join('\n')}
+${provenanceOnly.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
@@ -69,17 +75,17 @@ ${staged.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
-### Untrusted
+### None
 
-> Published with a regular token and without a provenance attestation.
+> Neither published via trusted publishing nor with a provenance attestation.
 
 <details>
 
-<summary>Click to show first 200 of ${untrusted.length}</summary>
+<summary>Click to show first 200 of ${none.length}</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${untrusted.slice(0, 200).map(generatePackageItem).join('\n')}
+${none.slice(0, 200).map(generatePackageItem).join('\n')}
 
 </details>`
 

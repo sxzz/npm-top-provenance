@@ -1,25 +1,14 @@
 import { createCanvas, SvgExportFlag } from '@napi-rs/canvas'
 import Chart from 'chart.js/auto'
 import stats from '../daily-stats.json' with { type: 'json' }
-import { COLORS, registerInterFont, writeChartSvg } from './shared.ts'
+import {
+  COLORS,
+  registerInterFont,
+  writeChartSvg,
+  type DailyStat,
+} from './shared.ts'
 
 registerInterFont()
-
-interface DailyStat {
-  date: string
-  listSize: number
-  trusted: number
-  trustedNoProvenance?: number
-  provenance: number
-  untrusted: number
-  staged?: number
-  total: number
-  trustedPercent: number
-  trustedNoProvenancePercent?: number
-  provenancePercent: number
-  untrustedPercent: number
-  stagedPercent?: number
-}
 
 const data = stats as DailyStat[]
 
@@ -57,47 +46,62 @@ interface SeriesSpec {
   label: string
   color: string
   values: (number | null)[]
-  spanGaps?: boolean
 }
+
+const pickPct = (key: keyof DailyStat): (number | null)[] =>
+  data.map((d) => (d[key] as number | undefined) ?? null)
 
 const series: SeriesSpec[] = [
   {
-    label: 'Trusted',
-    color: COLORS.trusted,
-    values: data.map((d) => d.trustedPercent),
+    label: 'Trusted + Provenance',
+    color: COLORS.trustedAndProvenance,
+    values: pickPct('trustedAndProvenancePercent'),
   },
   {
     label: 'Trusted without provenance',
-    color: COLORS.trustedNoProvenance,
-    values: data.map((d) => d.trustedNoProvenancePercent ?? null),
-    spanGaps: true,
+    color: COLORS.trustedWithoutProvenance,
+    values: pickPct('trustedWithoutProvenancePercent'),
   },
   {
-    label: 'Provenance',
+    label: 'Provenance only',
+    color: COLORS.provenanceOnly,
+    values: pickPct('provenanceOnlyPercent'),
+  },
+  {
+    label: 'None',
+    color: COLORS.none,
+    values: pickPct('nonePercent'),
+  },
+  {
+    label: 'Trusted (total)',
+    color: COLORS.trusted,
+    values: pickPct('trustedPercent'),
+  },
+  {
+    label: 'Provenance (total)',
     color: COLORS.provenance,
-    values: data.map((d) => d.provenancePercent),
-  },
-  {
-    label: 'Untrusted',
-    color: COLORS.untrusted,
-    values: data.map((d) => d.untrustedPercent),
+    values: pickPct('provenancePercent'),
   },
   {
     label: 'Staged',
     color: COLORS.staged,
-    values: data.map((d) => d.stagedPercent ?? null),
-    spanGaps: true,
+    values: pickPct('stagedPercent'),
+  },
+  {
+    label: 'Trusted + Provenance + Staged',
+    color: COLORS.trustedProvenanceStaged,
+    values: pickPct('trustedProvenanceStagedPercent'),
   },
 ]
 
-const canvas = createCanvas(1000, 500, SvgExportFlag.ConvertTextToPaths)
+const canvas = createCanvas(1000, 560, SvgExportFlag.ConvertTextToPaths)
 
 const chart = new Chart(canvas as any, {
   type: 'line',
   plugins: [verticalLinePlugin],
   data: {
     labels: data.map((d) => d.date),
-    datasets: series.map(({ label, color, values, spanGaps }) => ({
+    datasets: series.map(({ label, color, values }) => ({
       label,
       data: values,
       borderColor: color,
@@ -108,7 +112,7 @@ const chart = new Chart(canvas as any, {
       pointBackgroundColor: COLORS.marker,
       pointBorderColor: COLORS.marker,
       borderWidth: 2,
-      spanGaps,
+      spanGaps: true,
     })),
   },
   options: {
@@ -117,13 +121,13 @@ const chart = new Chart(canvas as any, {
       legend: {
         position: 'bottom',
         labels: {
-          padding: 16,
-          font: { size: 16, family: 'Inter' },
+          padding: 14,
+          font: { size: 15, family: 'Inter' },
         },
       },
       title: {
         display: true,
-        text: 'npm Top Packages — Provenance Status Over Time (%)',
+        text: 'npm Top Packages — Provenance & Publishing Adoption Over Time (%)',
         font: { size: 18, family: 'Inter' },
         padding: { top: 8, bottom: 12 },
       },

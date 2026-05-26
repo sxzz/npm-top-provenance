@@ -3,7 +3,12 @@ import ky, { HTTPError } from 'ky'
 import { createSpinner } from 'nanospinner'
 import { npmHighImpact } from 'npm-high-impact'
 import pLimit from 'p-limit'
-import { classifyResults, type Result, type Results } from './shared.ts'
+import {
+  classifyResults,
+  type DailyStat,
+  type Result,
+  type Results,
+} from './shared.ts'
 
 const limit = pLimit(16)
 
@@ -40,47 +45,32 @@ fs.writeFileSync('results.json', `${JSON.stringify(results)}\n`)
 
 updateDailyStats(fullResults)
 
-interface DailyStat {
-  date: string
-  listSize: number
-  trusted: number
-  trustedNoProvenance: number
-  provenance: number
-  untrusted: number
-  staged: number
-  total: number
-  trustedPercent: number
-  trustedNoProvenancePercent: number
-  provenancePercent: number
-  untrustedPercent: number
-  stagedPercent: number
-}
-
 function updateDailyStats(fullResults: Results): void {
-  const classified = classifyResults(fullResults)
-  const trusted = classified.trusted.length
-  const trustedNoProvenance = classified.trustedNoProvenance.length
-  const provenance = classified.provenance.length
-  const untrusted = classified.untrusted.length
-  const staged = classified.staged.length
-  const total = classified.count
+  const c = classifyResults(fullResults)
+  const total = c.count
   const pct = (n: number): number => Math.round((n / total) * 10000) / 100
 
   const date = new Date().toISOString().slice(0, 10)
   const entry: DailyStat = {
     date,
     listSize: Object.keys(fullResults).length,
-    trusted,
-    trustedNoProvenance,
-    provenance,
-    untrusted,
-    staged,
     total,
-    trustedPercent: pct(trusted),
-    trustedNoProvenancePercent: pct(trustedNoProvenance),
-    provenancePercent: pct(provenance),
-    untrustedPercent: pct(untrusted),
-    stagedPercent: pct(staged),
+    trustedAndProvenance: c.trustedAndProvenance.length,
+    trustedAndProvenancePercent: pct(c.trustedAndProvenance.length),
+    trustedWithoutProvenance: c.trustedWithoutProvenance.length,
+    trustedWithoutProvenancePercent: pct(c.trustedWithoutProvenance.length),
+    provenanceOnly: c.provenanceOnly.length,
+    provenanceOnlyPercent: pct(c.provenanceOnly.length),
+    none: c.none.length,
+    nonePercent: pct(c.none.length),
+    trusted: c.trusted.length,
+    trustedPercent: pct(c.trusted.length),
+    provenance: c.provenance.length,
+    provenancePercent: pct(c.provenance.length),
+    staged: c.staged.length,
+    stagedPercent: pct(c.staged.length),
+    trustedProvenanceStaged: c.trustedProvenanceStaged.length,
+    trustedProvenanceStagedPercent: pct(c.trustedProvenanceStaged.length),
   }
 
   const path = 'daily-stats.json'
