@@ -1,21 +1,21 @@
 {
-  "name": "npm-top-provenance",
+  "name": "npm-top-publishing",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@11.3.0",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/sxzz",
-  "homepage": "https://github.com/sxzz/npm-top-provenance#readme",
+  "homepage": "https://github.com/sxzz/npm-top-publishing#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sxzz/npm-top-provenance.git"
+    "url": "git+https://github.com/sxzz/npm-top-publishing.git"
   },
   "bugs": {
-    "url": "https://github.com/sxzz/npm-top-provenance/issues"
+    "url": "https://github.com/sxzz/npm-top-publishing/issues"
   },
   "scripts": {
-    "refresh": "node src/index.ts && node src/update-readme.ts && node src/chart-pie.ts && node src/chart-daily.ts && pnpm run format && svgo chart-pie.svg chart-daily.svg",
+    "refresh": "node src/index.ts && node src/update-readme.ts && node src/chart-pie.ts && node src/chart-daily.ts && pnpm run format && svgo chart-pie.svg chart-daily-combo.svg chart-daily-independent.svg",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsgo --noEmit",

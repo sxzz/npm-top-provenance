@@ -33,26 +33,19 @@ export const COLORS = {
 
 export interface DailyStat {
   date: string
+  sha?: string
   listSize: number
   total: number
   // Combo buckets (mutually exclusive, sum to total)
   trustedAndProvenance?: number
-  trustedAndProvenancePercent?: number
   trustedWithoutProvenance?: number
-  trustedWithoutProvenancePercent?: number
   provenanceOnly?: number
-  provenanceOnlyPercent?: number
   none?: number
-  nonePercent?: number
   // Independent metrics
   trusted?: number
-  trustedPercent?: number
   provenance?: number
-  provenancePercent?: number
   staged?: number
-  stagedPercent?: number
   trustedProvenanceStaged?: number
-  trustedProvenanceStagedPercent?: number
 }
 
 export interface Classified {

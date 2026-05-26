@@ -1,3 +1,4 @@
+import { execSync } from 'node:child_process'
 import fs from 'node:fs'
 import ky, { HTTPError } from 'ky'
 import { createSpinner } from 'nanospinner'
@@ -47,30 +48,21 @@ updateDailyStats(fullResults)
 
 function updateDailyStats(fullResults: Results): void {
   const c = classifyResults(fullResults)
-  const total = c.count
-  const pct = (n: number): number => Math.round((n / total) * 10000) / 100
-
   const date = new Date().toISOString().slice(0, 10)
+  const sha = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim()
   const entry: DailyStat = {
     date,
+    sha,
     listSize: Object.keys(fullResults).length,
-    total,
+    total: c.count,
     trustedAndProvenance: c.trustedAndProvenance.length,
-    trustedAndProvenancePercent: pct(c.trustedAndProvenance.length),
     trustedWithoutProvenance: c.trustedWithoutProvenance.length,
-    trustedWithoutProvenancePercent: pct(c.trustedWithoutProvenance.length),
     provenanceOnly: c.provenanceOnly.length,
-    provenanceOnlyPercent: pct(c.provenanceOnly.length),
     none: c.none.length,
-    nonePercent: pct(c.none.length),
     trusted: c.trusted.length,
-    trustedPercent: pct(c.trusted.length),
     provenance: c.provenance.length,
-    provenancePercent: pct(c.provenance.length),
     staged: c.staged.length,
-    stagedPercent: pct(c.staged.length),
     trustedProvenanceStaged: c.trustedProvenanceStaged.length,
-    trustedProvenanceStagedPercent: pct(c.trustedProvenanceStaged.length),
   }
 
   const path = 'daily-stats.json'
