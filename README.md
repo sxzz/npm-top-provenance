@@ -18,11 +18,11 @@ Generated time: 2026-05-26T15:34:01.468Z
 
 Total packages: 14899
 
-Full results in [results.json](./results.json)
+Compact tuples in [results.json](./results.json) · Full data with version and author in [full-results.json](./full-results.json)
 
 ### Trusted + Provenance
 
-> Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation.
+Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation.
 
 <details>
 
@@ -535,7 +535,7 @@ Full results in [results.json](./results.json)
 
 ### Trusted without provenance
 
-> Published via trusted publishing but with provenance attestation disabled.
+Published via trusted publishing but with provenance attestation disabled.
 
 <details>
 
@@ -614,7 +614,7 @@ Full results in [results.json](./results.json)
 
 ### Provenance only
 
-> Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation, but not published via trusted publishing.
+Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation, but not published via trusted publishing.
 
 <details>
 
@@ -1100,7 +1100,7 @@ Full results in [results.json](./results.json)
 
 ### Staged
 
-> Published via [staged publishing](https://docs.npmjs.com/staged-publishing/).
+Published via [staged publishing](https://docs.npmjs.com/staged-publishing/).
 
 <details>
 
@@ -1119,7 +1119,7 @@ Full results in [results.json](./results.json)
 
 ### None
 
-> Neither published via trusted publishing nor with a provenance attestation.
+Neither published via trusted publishing nor with a provenance attestation.
 
 <details>
 

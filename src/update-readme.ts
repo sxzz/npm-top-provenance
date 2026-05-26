@@ -17,11 +17,11 @@ Generated time: ${new Date().toISOString()}
 
 Total packages: ${count}
 
-Full results in [results.json](./results.json)
+Compact tuples in [results.json](./results.json) · Full data with version and author in [full-results.json](./full-results.json)
 
 ### Trusted + Provenance
 
-> Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation.
+Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation.
 
 <details>
 
@@ -35,7 +35,7 @@ ${trustedAndProvenance.slice(0, 500).map(generatePackageItem).join('\n')}
 
 ### Trusted without provenance
 
-> Published via trusted publishing but with provenance attestation disabled.
+Published via trusted publishing but with provenance attestation disabled.
 
 <details>
 
@@ -49,7 +49,7 @@ ${trustedWithoutProvenance.slice(0, 200).map(generatePackageItem).join('\n')}
 
 ### Provenance only
 
-> Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation, but not published via trusted publishing.
+Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation, but not published via trusted publishing.
 
 <details>
 
@@ -63,7 +63,7 @@ ${provenanceOnly.slice(0, 500).map(generatePackageItem).join('\n')}
 
 ### Staged
 
-> Published via [staged publishing](https://docs.npmjs.com/staged-publishing/).
+Published via [staged publishing](https://docs.npmjs.com/staged-publishing/).
 
 <details>
 
@@ -77,7 +77,7 @@ ${staged.slice(0, 500).map(generatePackageItem).join('\n')}
 
 ### None
 
-> Neither published via trusted publishing nor with a provenance attestation.
+Neither published via trusted publishing nor with a provenance attestation.
 
 <details>
 
