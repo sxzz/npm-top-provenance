@@ -56,14 +56,14 @@ const pickPct = (key: keyof DailyStat): (number | null)[] =>
 
 const comboSeries: SeriesSpec[] = [
   {
-    label: 'Trusted + Provenance',
-    color: COLORS.trustedAndProvenance,
-    values: pickPct('trustedAndProvenance'),
+    label: 'OIDC + Provenance',
+    color: COLORS.oidcAndProvenance,
+    values: pickPct('oidcAndProvenance'),
   },
   {
-    label: 'Trusted without provenance',
-    color: COLORS.trustedWithoutProvenance,
-    values: pickPct('trustedWithoutProvenance'),
+    label: 'OIDC without provenance',
+    color: COLORS.oidcWithoutProvenance,
+    values: pickPct('oidcWithoutProvenance'),
   },
   {
     label: 'Provenance only',
@@ -79,9 +79,9 @@ const comboSeries: SeriesSpec[] = [
 
 const independentSeries: SeriesSpec[] = [
   {
-    label: 'Trusted',
-    color: COLORS.trusted,
-    values: pickPct('trusted'),
+    label: 'OIDC',
+    color: COLORS.oidc,
+    values: pickPct('oidc'),
   },
   {
     label: 'Provenance',
@@ -94,9 +94,9 @@ const independentSeries: SeriesSpec[] = [
     values: pickPct('staged'),
   },
   {
-    label: 'Trusted + Provenance + Staged',
-    color: COLORS.trustedProvenanceStaged,
-    values: pickPct('trustedProvenanceStaged'),
+    label: 'OIDC + Provenance + Staged',
+    color: COLORS.oidcProvenanceStaged,
+    values: pickPct('oidcProvenanceStaged'),
   },
 ]
 

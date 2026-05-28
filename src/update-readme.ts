@@ -6,8 +6,8 @@ const {
   count,
   provenanceOnly,
   staged,
-  trustedAndProvenance,
-  trustedWithoutProvenance,
+  oidcAndProvenance,
+  oidcWithoutProvenance,
   none,
 } = classifyResults(results as unknown as Results)
 
@@ -19,37 +19,37 @@ Total packages: ${count}
 
 Compact tuples in [results.json](./results.json) · Full data with version and author in [full-results.json](./full-results.json)
 
-### Trusted + Provenance
+### OIDC + Provenance
 
 Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation.
 
 <details>
 
-<summary>Click to show first 500 of ${trustedAndProvenance.length} in total</summary>
+<summary>Click to show first 500 of ${oidcAndProvenance.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${trustedAndProvenance.slice(0, 500).map(generatePackageItem).join('\n')}
+${oidcAndProvenance.slice(0, 500).map(generatePackageItem).join('\n')}
 
 </details>
 
-### Trusted without provenance
+### OIDC without provenance
 
-Published via trusted publishing but with provenance attestation disabled.
+Published via OIDC but with provenance attestation disabled.
 
 <details>
 
-<summary>Click to show first 200 of ${trustedWithoutProvenance.length} in total</summary>
+<summary>Click to show first 200 of ${oidcWithoutProvenance.length} in total</summary>
 
 |  Package   | Downloads |
 | ---------- | --------: |
-${trustedWithoutProvenance.slice(0, 200).map(generatePackageItem).join('\n')}
+${oidcWithoutProvenance.slice(0, 200).map(generatePackageItem).join('\n')}
 
 </details>
 
 ### Provenance only
 
-Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation, but not published via trusted publishing.
+Has a [provenance](https://docs.npmjs.com/generating-provenance-statements) attestation, but not published via OIDC.
 
 <details>
 
@@ -77,7 +77,7 @@ ${staged.slice(0, 500).map(generatePackageItem).join('\n')}
 
 ### None
 
-Neither published via trusted publishing nor with a provenance attestation.
+Neither published via OIDC nor with a provenance attestation.
 
 <details>
 

@@ -7,7 +7,7 @@ export type Result =
       version: string,
       author: string | null,
       provenance: boolean,
-      trustedPublisher: boolean,
+      oidc: boolean,
       staged: boolean,
     ]
   | null
@@ -17,15 +17,15 @@ export interface Results {
 
 export const COLORS = {
   // Combo buckets (mutually exclusive)
-  trustedAndProvenance: '#59a14f',
-  trustedWithoutProvenance: '#edc949',
+  oidcAndProvenance: '#59a14f',
+  oidcWithoutProvenance: '#edc949',
   provenanceOnly: '#f28e2c',
   none: '#e15759',
   // Independent metrics
-  trusted: '#76b7b2',
+  oidc: '#76b7b2',
   provenance: '#b07aa1',
   staged: '#4e79a7',
-  trustedProvenanceStaged: '#9c755f',
+  oidcProvenanceStaged: '#9c755f',
   // Misc
   nonStaged: '#cecece',
   marker: '#888',
@@ -37,70 +37,69 @@ export interface DailyStat {
   listSize: number
   total: number
   // Combo buckets (mutually exclusive, sum to total)
-  trustedAndProvenance?: number
-  trustedWithoutProvenance?: number
+  oidcAndProvenance?: number
+  oidcWithoutProvenance?: number
   provenanceOnly?: number
   none?: number
   // Independent metrics
-  trusted?: number
+  oidc?: number
   provenance?: number
   staged?: number
-  trustedProvenanceStaged?: number
+  oidcProvenanceStaged?: number
 }
 
 export interface Classified {
   // Combo buckets (mutually exclusive, sum to count)
-  trustedAndProvenance: string[]
-  trustedWithoutProvenance: string[]
+  oidcAndProvenance: string[]
+  oidcWithoutProvenance: string[]
   provenanceOnly: string[]
   none: string[]
   // Independent / overlapping metrics
-  trusted: string[]
+  oidc: string[]
   provenance: string[]
   staged: string[]
-  trustedProvenanceStaged: string[]
+  oidcProvenanceStaged: string[]
   count: number
 }
 
 export function classifyResults(results: Results): Classified {
-  const trustedAndProvenance: string[] = []
-  const trustedWithoutProvenance: string[] = []
+  const oidcAndProvenance: string[] = []
+  const oidcWithoutProvenance: string[] = []
   const provenanceOnly: string[] = []
   const none: string[] = []
-  const trusted: string[] = []
+  const oidc: string[] = []
   const provenance: string[] = []
   const staged: string[] = []
-  const trustedProvenanceStaged: string[] = []
+  const oidcProvenanceStaged: string[] = []
   for (const [name, result] of Object.entries(results)) {
     if (!result) continue
-    const [, , hasProvenance, trustedPublisher, isStaged] = result
-    if (trustedPublisher && hasProvenance) {
-      trustedAndProvenance.push(name)
-    } else if (trustedPublisher) {
-      trustedWithoutProvenance.push(name)
+    const [, , hasProvenance, hasOidc, isStaged] = result
+    if (hasOidc && hasProvenance) {
+      oidcAndProvenance.push(name)
+    } else if (hasOidc) {
+      oidcWithoutProvenance.push(name)
     } else if (hasProvenance) {
       provenanceOnly.push(name)
     } else {
       none.push(name)
     }
-    if (trustedPublisher) trusted.push(name)
+    if (hasOidc) oidc.push(name)
     if (hasProvenance) provenance.push(name)
     if (isStaged) staged.push(name)
-    if (trustedPublisher && hasProvenance && isStaged)
-      trustedProvenanceStaged.push(name)
+    if (hasOidc && hasProvenance && isStaged) oidcProvenanceStaged.push(name)
   }
   return {
-    trustedAndProvenance,
-    trustedWithoutProvenance,
+    oidcAndProvenance,
+    oidcWithoutProvenance,
     provenanceOnly,
     none,
-    trusted,
+    oidc,
     provenance,
     staged,
-    trustedProvenanceStaged,
+    oidcProvenanceStaged,
     count:
-      trustedAndProvenance.length +
-      trustedWithoutProvenance.length +
+      oidcAndProvenance.length +
+      oidcWithoutProvenance.length +
       provenanceOnly.length +
       none.length,
   }

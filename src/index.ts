@@ -38,8 +38,8 @@ fs.writeFileSync('full-results.json', `${JSON.stringify(fullResults)}\n`)
 const results = Object.fromEntries(
   Object.entries(fullResults).map(([name, result]) => {
     if (!result) return [name, null]
-    const [, , provenance, trustedPublisher, staged] = result
-    return [name, [provenance, trustedPublisher, staged]]
+    const [, , provenance, oidc, staged] = result
+    return [name, [provenance, oidc, staged]]
   }),
 )
 fs.writeFileSync('results.json', `${JSON.stringify(results)}\n`)
@@ -55,14 +55,14 @@ function updateDailyStats(fullResults: Results): void {
     sha,
     listSize: Object.keys(fullResults).length,
     total: c.count,
-    trustedAndProvenance: c.trustedAndProvenance.length,
-    trustedWithoutProvenance: c.trustedWithoutProvenance.length,
+    oidcAndProvenance: c.oidcAndProvenance.length,
+    oidcWithoutProvenance: c.oidcWithoutProvenance.length,
     provenanceOnly: c.provenanceOnly.length,
     none: c.none.length,
-    trusted: c.trusted.length,
+    oidc: c.oidc.length,
     provenance: c.provenance.length,
     staged: c.staged.length,
-    trustedProvenanceStaged: c.trustedProvenanceStaged.length,
+    oidcProvenanceStaged: c.oidcProvenanceStaged.length,
   }
 
   const path = 'daily-stats.json'
@@ -106,8 +106,8 @@ async function getMetadata(name: string): Promise<Result> {
       : typeof response.author === 'object' && response.author
         ? `${response.author.name}${response.author.email ? ` <${response.author.email}>` : ''}`
         : null
-  const trustedPublisher = !!response._npmUser?.trustedPublisher
+  const oidc = !!response._npmUser?.trustedPublisher
   const provenance = !!response.dist?.attestations?.provenance
   const staged = Object.keys(response)[0] === '_id'
-  return [version, author, provenance, trustedPublisher, staged]
+  return [version, author, provenance, oidc, staged]
 }

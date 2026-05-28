@@ -13,8 +13,8 @@ const {
   count,
   provenanceOnly,
   staged,
-  trustedAndProvenance,
-  trustedWithoutProvenance,
+  oidcAndProvenance,
+  oidcWithoutProvenance,
   none,
 } = classifyResults(results as unknown as Results)
 
@@ -67,20 +67,20 @@ function makePattern(base: string, line: string, kind: PatternKind) {
 
 // Provenance state (inner pie) — Tableau-style desaturated palette
 const provenanceLabels = [
-  'Trusted + Provenance',
-  'Trusted without provenance',
+  'OIDC + Provenance',
+  'OIDC without provenance',
   'Provenance only',
   'None',
 ]
 const provenanceBase = [
-  COLORS.trustedAndProvenance,
-  COLORS.trustedWithoutProvenance,
+  COLORS.oidcAndProvenance,
+  COLORS.oidcWithoutProvenance,
   COLORS.provenanceOnly,
   COLORS.none,
 ]
 const provenanceFills = [
-  makePattern(COLORS.trustedAndProvenance, '#2f5e2a', 'dots'),
-  makePattern(COLORS.trustedWithoutProvenance, '#8a6f1e', 'cross'),
+  makePattern(COLORS.oidcAndProvenance, '#2f5e2a', 'dots'),
+  makePattern(COLORS.oidcWithoutProvenance, '#8a6f1e', 'cross'),
   makePattern(COLORS.provenanceOnly, '#a05c14', 'forward'),
   makePattern(COLORS.none, '#8a3133', 'backward'),
 ]
@@ -105,8 +105,8 @@ const chart = new Chart(canvas as any, {
       {
         label: 'Provenance state',
         data: [
-          trustedAndProvenance.length,
-          trustedWithoutProvenance.length,
+          oidcAndProvenance.length,
+          oidcWithoutProvenance.length,
           provenanceOnly.length,
           none.length,
         ],
