@@ -48,32 +48,32 @@ interface SeriesSpec {
   values: (number | null)[]
 }
 
-const pickPct = (key: keyof DailyStat): (number | null)[] =>
+const pickValue = (key: keyof DailyStat): (number | null)[] =>
   data.map((d) => {
     const v = d[key] as number | undefined
-    return v == null ? null : Math.round((v / d.total) * 10000) / 100
+    return v == null ? null : v
   })
 
 const comboSeries: SeriesSpec[] = [
   {
     label: 'OIDC + Provenance',
     color: COLORS.oidcAndProvenance,
-    values: pickPct('oidcAndProvenance'),
+    values: pickValue('oidcAndProvenance'),
   },
   {
     label: 'OIDC without provenance',
     color: COLORS.oidcWithoutProvenance,
-    values: pickPct('oidcWithoutProvenance'),
+    values: pickValue('oidcWithoutProvenance'),
   },
   {
     label: 'Provenance only',
     color: COLORS.provenanceOnly,
-    values: pickPct('provenanceOnly'),
+    values: pickValue('provenanceOnly'),
   },
   {
     label: 'None',
     color: COLORS.none,
-    values: pickPct('none'),
+    values: pickValue('none'),
   },
 ]
 
@@ -81,22 +81,22 @@ const independentSeries: SeriesSpec[] = [
   {
     label: 'OIDC',
     color: COLORS.oidc,
-    values: pickPct('oidc'),
+    values: pickValue('oidc'),
   },
   {
     label: 'Provenance',
     color: COLORS.provenance,
-    values: pickPct('provenance'),
+    values: pickValue('provenance'),
   },
   {
     label: 'Staged',
     color: COLORS.staged,
-    values: pickPct('staged'),
+    values: pickValue('staged'),
   },
   {
     label: 'OIDC + Provenance + Staged',
     color: COLORS.oidcProvenanceStaged,
-    values: pickPct('oidcProvenanceStaged'),
+    values: pickValue('oidcProvenanceStaged'),
   },
 ]
 
@@ -153,10 +153,8 @@ function renderChart(
         },
         y: {
           beginAtZero: true,
-          max: 100,
           ticks: {
             font: { size: 13, family: 'Inter' },
-            callback: (v) => `${v}%`,
           },
         },
       },
@@ -167,14 +165,14 @@ function renderChart(
 
 const combo = renderChart(
   comboSeries,
-  'npm Top Packages — Provenance Adoption Over Time (%)',
+  'npm Top Packages — Provenance Adoption Over Time',
 )
 await writeChartSvg(combo.canvas, 'chart-daily-combo.svg')
 combo.chart.destroy()
 
 const independent = renderChart(
   independentSeries,
-  'npm Top Packages — Independent Publishing Metrics Over Time (%)',
+  'npm Top Packages — Independent Publishing Metrics Over Time',
 )
 await writeChartSvg(independent.canvas, 'chart-daily-independent.svg')
 independent.chart.destroy()
