@@ -6,6 +6,7 @@ const {
   count,
   provenanceOnly,
   staged,
+  oidcProvenanceStaged,
   oidcAndProvenance,
   oidcWithoutProvenance,
   none,
@@ -18,6 +19,20 @@ Generated time: ${new Date().toISOString()}
 Total packages: ${count}
 
 Compact tuples in [results.json](./results.json) · Full data with version and author in [full-results.json](./full-results.json)
+
+### OIDC + Provenance + Staged
+
+Published via [trusted publishing](https://docs.npmjs.com/trusted-publishers) with a provenance attestation and [staged publishing](https://docs.npmjs.com/staged-publishing/). This is currently the most secure way to publish.
+
+<details>
+
+<summary>Click to show first 500 of ${oidcProvenanceStaged.length} in total</summary>
+
+|  Package   | Downloads |
+| ---------- | --------: |
+${oidcProvenanceStaged.slice(0, 500).map(generatePackageItem).join('\n')}
+
+</details>
 
 ### OIDC + Provenance
 
