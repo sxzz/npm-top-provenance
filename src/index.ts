@@ -108,6 +108,7 @@ async function getMetadata(name: string): Promise<Result> {
         : null
   const oidc = !!response._npmUser?.trustedPublisher
   const provenance = !!response.dist?.attestations?.provenance
-  const staged = Object.keys(response)[0] === '_id'
+  const staged =
+    Object.keys(response)[0] === '_id' || !!response._npmUser?.approver
   return [version, author, provenance, oidc, staged]
 }
